@@ -1,0 +1,19 @@
+{
+  "notion_version": "2025-09-03",
+  "data_sources": {
+    "people": "2202f3f7-7214-4e80-bede-870d0d2ec3ec",
+    "publications": "e1a62360-3dc8-40c5-a309-9f2d286c80d9",
+    "topics": "ee10cd12-a7fb-4f44-b3ee-04a1faa87b6a",
+    "figures": "85c4cd6f-3b41-428d-abac-de319b8f136c",
+    "news": "c4bdcf73-9811-4686-92ac-a10c9f1f3e5b",
+    "teaching": "1a37c8ec-71cb-42cb-8184-024a9d0dd006",
+    "photos": "0d733f76-680e-4531-b5be-912663ed257a",
+    "videos": "cde7d48c-56c1-4138-bc84-6c9854f314cb",
+    "highlights": "e8d49687-6546-436c-a0b3-f5e034f0e0a8",
+    "site_content": "4b11c4dc-222f-4cec-b916-a278e8171e32"
+  },
+  "image_widths": {
+    "person": 480, "photo": 640, "fig": 900, "slide": 1200, "hero": 1800, "collab": 1400, "research_banner": 1800, "social": 160
+  },
+  "output_dir": "site"
+}
