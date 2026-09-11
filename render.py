@@ -39,6 +39,8 @@ def main():
     (OUT / '.nojekyll').write_text('')
     cname = HERE / 'CNAME'
     if cname.exists(): shutil.copyfile(cname, OUT / 'CNAME')
+    fav = HERE / 'favicon.png'          # browser-tab icon; replace this file to change it
+    if fav.exists(): shutil.copyfile(fav, OUT / 'favicon.png')
     print('wrote', OUT / 'index.html', f'({len(full)/1e6:.2f} MB html, {len(assets)} images)')
 
 if __name__ == '__main__':
