@@ -576,16 +576,18 @@ function pubRow(p, activeAuthor){
     </div></article>`;
 }
 let PF = {q:'', year:'', type:'', author:null, topic:null};
+let yearCut = 0;
 function pubsPage(q){
   PF = {q:'', year:'', type:'', author: q.get('author')?+q.get('author'):null, topic: q.get('topic')?+q.get('topic'):null};
   const years = [...new Set(D.pubs.map(p=>p.year))].sort((a,b)=>b-a);
+  yearCut = years[0] - 6;   // e.g. 2026 → buttons 2020…2026 and "~2019"
   return banner('hero','Publications',`${D.pubs.length} papers · ${years[years.length-1]}–${years[0]}`) + `<div class="wrap">
     <div class="topicbar" id="ptopic"><button class="chip all ${PF.topic?'':'on'}" data-v="">Show All</button>${D.topics.map(t=>`<button class="chip t${t.id} ${PF.topic===t.id?'on':''}" data-v="${t.id}">${esc(shortTopic(t))}</button>`).join('')}</div>
     <div class="toolbar"><div class="row">
       <label class="input">${ICON.search}<input id="pq" placeholder="Search title, author, venue…" autocomplete="off"></label>
       <div class="seg" id="ptype"><button class="on" data-v="">All types</button>${TYPES.filter(t=>D.pubs.filter(p=>p.type===t).length>=2).map(t=>`<button data-v="${t}">${t}</button>`).join('')}</div>
     </div>
-    <div class="row" style="margin-top:8px"><div class="seg" id="pyear"><button class="on" data-v="">All years</button>${years.map(y=>`<button data-v="${y}">${y}</button>`).join('')}</div></div>
+    <div class="row" style="margin-top:8px"><div class="seg" id="pyear"><button class="on" data-v="">All years</button>${years.filter(y=>y>=yearCut).map(y=>`<button data-v="${y}">${y}</button>`).join('')}${years.some(y=>y<yearCut)?`<button data-v="old">~${yearCut-1}</button>`:''}</div></div>
     <div id="pnote"></div></div>
     <div id="plist"></div>
     <div style="height:32px"></div>
@@ -596,7 +598,7 @@ function renderPubs(){
   const q = PF.q.trim().toLowerCase();
   if(PF.author) list = list.filter(p=>p.members.includes(PF.author));
   if(PF.topic) list = list.filter(p=>(p.topics||[]).includes(PF.topic));
-  if(PF.year) list = list.filter(p=>String(p.year)===PF.year);
+  if(PF.year==='old') list = list.filter(p=>p.year<yearCut); else if(PF.year) list = list.filter(p=>String(p.year)===PF.year);
   if(PF.type) list = list.filter(p=>p.type===PF.type);
   if(q) list = list.filter(p=>(p.title+' '+p.authors+' '+p.venue+' '+p.venue_short+' '+p.pid).toLowerCase().includes(q));
   const note = document.getElementById('pnote'); let notes=[];
