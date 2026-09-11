@@ -364,6 +364,7 @@ def main():
         'openings_title': SC.get('openings_title', 'Openings'), 'openings_open': SC.get('openings_open', 'true').strip().lower() == 'true',
         'openings_en': SC.get('openings_en', ''), 'openings_ko': SC.get('openings_ko', ''),
         'home_news_count': int(SC.get('home_news_count', '10') or 10),
+        'home_new_count': int(SC.get('home_new_count', '5') or 5),   # how many newest News items get the NEW badge
     }
     data = {'site': site, 'people': people, 'pubs': pubs, 'topics': topics, 'news': news, 'teaching': teaching, 'photos': photos,
             'videos': videos, 'socials': socials, 'highlights': highlights, 'generated': time.strftime('%Y-%m-%d %H:%M')}

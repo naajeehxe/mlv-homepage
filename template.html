@@ -442,7 +442,9 @@ function homePage(){
     <div class="collab"><img src="${img('collab')}" alt="Supports and collaborators"></div>
   </div></section>`;
 }
-const newsRow = n => `<li><time>${n.date}</time><p>${md(n.md).replace(/^<p>|<\/p>$/g,'')}${n.new?'<span class="pill">NEW</span>':''}</p></li>`;
+// NEW badge is automatic: the newest N items (Site Content `home_new_count`, default 5). The Notion "New" checkbox is not used.
+const NEW_N = Number(S.home_new_count) > 0 ? Number(S.home_new_count) : 5;
+const newsRow = (n, i) => `<li><time>${n.date}</time><p>${md(n.md).replace(/^<p>|<\/p>$/g,'')}${i < NEW_N ? '<span class="pill">NEW</span>' : ''}</p></li>`;
 function homeAfter(){
   let i=0; const imgs=[...document.querySelectorAll('#carousel .frame img')]; if(!imgs.length) return;
   const show=k=>{ i=(k+imgs.length)%imgs.length; imgs.forEach((im,j)=>im.classList.toggle('on',j===i)); document.getElementById('cidx').textContent=`${i+1} / ${imgs.length}`; document.getElementById('ccap').textContent=D.highlights[i].caption; };
