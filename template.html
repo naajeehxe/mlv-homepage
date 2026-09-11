@@ -333,6 +333,11 @@ const MODE = "__MODE__";
 const A = JSON.parse(document.getElementById('assets').textContent);
 const D = JSON.parse(document.getElementById('data').textContent);
 const S = D.site;
+// Safety net: if a single-value field arrived as a markdown link "[x](y)" (Notion auto-link), unwrap it to the bare URL/email.
+for (const k of ['site_url','pi_email','apply_email','scholar','map_embed','calendar_embed','map_link','calendar_link']) {
+  const m = /^\s*\[([^\]]*)\]\(([^)]*)\)\s*$/.exec(S[k] || '');
+  if (m) S[k] = (m[2] || m[1]).replace(/^mailto:/, '');
+}
 const img = k => A[k] || '';
 const esc = t => String(t ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const inline = t => esc(t)

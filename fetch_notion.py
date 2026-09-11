@@ -79,6 +79,14 @@ def rich(arr):
         s += txt
     return s
 
+def plain(props, name, default=''):
+    """Read a title/rich_text property as plain text (no markdown, no auto-links)."""
+    p = props.get(name)
+    if not p: return default
+    arr = p.get(p['type']) if p['type'] in ('title', 'rich_text') else None
+    if arr is None: return prop(props, name, default=default)
+    return ''.join(t.get('plain_text', '') for t in arr).strip()
+
 def prop(props, *names, default=''):
     """Read a property by (any of) its name(s), returning a plain Python value."""
     for n in names:
@@ -326,7 +334,7 @@ def main():
     # ---- Site content (key/value + page bodies)
     SC = {}
     for r in visible(query_all(ds['site_content'])):
-        p = r['properties']; k = prop(p, 'Key'); v = prop(p, 'Value')
+        p = r['properties']; k = plain(p, 'Key'); v = plain(p, 'Value')   # plain text: Notion auto-links URLs/emails, which would break hrefs/iframes
         if v.startswith('(') or k in ('home_intro', 'contact_address_en', 'contact_address_ko', 'openings_en', 'openings_ko'):
             body = body_markdown(r['id'])
             if body: v = body
