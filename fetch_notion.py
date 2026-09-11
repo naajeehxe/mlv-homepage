@@ -147,6 +147,17 @@ def fetch_bytes(url):
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read()
 
+def youtube_feed(channel_id):
+    """Latest uploads (max 15) of a YouTube channel via its public Atom feed → [{id, title, published}] newest first."""
+    import xml.etree.ElementTree as ET
+    ns = {'a': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
+    root = ET.fromstring(fetch_bytes(f'https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}'))
+    out = []
+    for e in root.findall('a:entry', ns):
+        vid = e.find('yt:videoId', ns); title = e.find('a:title', ns); pub = e.find('a:published', ns)
+        if vid is not None and vid.text: out.append({'id': vid.text.strip(), 'title': (title.text or '').strip() if title is not None else '', 'published': (pub.text or '')[:10] if pub is not None else ''})
+    return out
+
 def save_image(key, kind, sources, label='', no_images=False):
     """Try each source (Notion file URL, external URL, snapshot path) → site/img/<hash>.webp. Returns relative path or ''."""
     IMG.mkdir(parents=True, exist_ok=True)
@@ -317,12 +328,18 @@ def main():
 
     # ---- Videos
     videos = []
-    for r in sort_rows(visible(query_all(ds['videos']))):
-        p = r['properties']; vid = prop(p, 'YouTube ID') or re.sub(r'.*(?:v=|youtu\.be/)([\w-]{11}).*', r'\1', prop(p, 'YouTube URL'))
+    video_id = lambda p: prop(p, 'YouTube ID') or re.sub(r'.*(?:v=|youtu\.be/)([\w-]{11}).*', r'\1', prop(p, 'YouTube URL'))
+    def yt_thumb(vid):
         key = f'yt:{vid}'
         path = save_image(key, 'yt', [f'https://i.ytimg.com/vi/{vid}/hq720.jpg', f'https://i.ytimg.com/vi/{vid}/maxresdefault.jpg', f'https://i.ytimg.com/vi/{vid}/mqdefault.jpg'], no_images=no_img)   # 1280px if available, else 320px
         if path: A[key] = path
-        videos.append({'id': vid, 'title': prop(p, 'Title'), 'url': prop(p, 'YouTube URL') or f'https://www.youtube.com/watch?v={vid}', 'thumb': key})
+        return key
+    all_video_rows = query_all(ds['videos'])
+    shown_rows = visible(all_video_rows)
+    hidden_video_ids = {video_id(r['properties']) for r in all_video_rows if r not in shown_rows}   # rows with "Show on Site" unchecked also block the auto-sync
+    for r in sort_rows(shown_rows):
+        p = r['properties']; vid = video_id(p)
+        videos.append({'id': vid, 'title': prop(p, 'Title'), 'url': prop(p, 'YouTube URL') or f'https://www.youtube.com/watch?v={vid}', 'thumb': yt_thumb(vid)})
 
     # ---- Highlights
     highlights = []
@@ -366,6 +383,19 @@ def main():
         'home_news_count': int(SC.get('home_news_count', '10') or 10),
         'home_new_count': int(SC.get('home_new_count', '5') or 5),   # how many newest News items get the NEW badge
     }
+    # ---- YouTube auto-sync: newest uploads of the lab channel (RSS, latest 15) that are not in Notion go to the top of MLV TV.
+    #      Turn off with a Site Content row youtube_auto_sync = false. Hide one video by adding its URL to the MLV TV DB with "Show on Site" unchecked.
+    channel = (SC.get('youtube_channel_id') or CFG.get('youtube_channel_id') or '').strip()
+    if channel and SC.get('youtube_auto_sync', 'true').strip().lower() != 'false':
+        try:
+            known = {v['id'] for v in videos} | hidden_video_ids
+            fresh = [f for f in youtube_feed(channel) if f['id'] not in known]
+            auto = [{'id': f['id'], 'title': f['title'], 'url': f'https://www.youtube.com/watch?v={f["id"]}', 'thumb': yt_thumb(f['id']), 'date': f['published'], 'auto': True} for f in fresh]
+            videos = auto + videos
+            print(f'youtube feed: {len(fresh)} new video(s) added automatically')
+        except Exception as e:
+            print(f'  ! youtube feed skipped: {str(e)[:120]}', file=sys.stderr)
+
     data = {'site': site, 'people': people, 'pubs': pubs, 'topics': topics, 'news': news, 'teaching': teaching, 'photos': photos,
             'videos': videos, 'socials': socials, 'highlights': highlights, 'generated': time.strftime('%Y-%m-%d %H:%M')}
     BUILD.mkdir(exist_ok=True)
