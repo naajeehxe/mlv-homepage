@@ -187,9 +187,12 @@ table.list td a{color:var(--navy);font-weight:700}
 .year-head{display:flex;align-items:baseline;gap:12px;margin:36px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--navy)}
 .year-head h3{font-size:28px;font-weight:900}
 .year-head .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.pub{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
-.pub .thumb{aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:var(--band);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative}
-.pub .thumb img{width:100%;height:100%;object-fit:cover}
+.pub{display:grid;grid-template-columns:184px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+/* fixed 184×115 frame; the whole figure is always shown (object-fit:contain), never cropped or blown up */
+.pub .thumb{aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;align-self:start}
+.pub .thumb img{width:100%;height:100%;object-fit:contain;padding:4px;box-sizing:border-box;background:#fff}
+.pub .thumb button{width:100%;height:100%;display:block;cursor:zoom-in}
+.pub .thumb button:hover img{opacity:.9}
 .pub .thumb .tile{font:900 20px/1 var(--body);color:var(--navy);text-align:center;padding:10px;letter-spacing:-.01em}
 .pub .thumb .tile small{display:block;font:500 11px/1.4 var(--mono);letter-spacing:.08em;color:var(--muted);margin-top:6px}
 .pub h4{font-size:16.5px;line-height:1.35;display:inline}
@@ -512,7 +515,7 @@ function pubRow(p, activeAuthor){
   const yr = String(p.year).slice(2);
   const chips = `<span class="chip">${esc(p.venue_short)}</span>` + (p.badge?`<span class="chip warm">${esc(p.badge)}</span>`:'') + (p.topics||[]).map(t=>topicChip(t)).join('');
   return `<article class="pub" id="pub${p.id}">
-    <div class="thumb">${p.thumb?`<img src="${img(p.thumb)}" alt="" loading="lazy">`:`<div class="tile">${esc(short)}<small>${p.type==='Conference'||p.type==='Workshop'?"'"+yr:p.year}</small></div>`}</div>
+    <div class="thumb">${p.thumb?`<button data-fig="${p.id}" aria-label="Enlarge figure"><img src="${img(p.thumb)}" alt="" loading="lazy"></button>`:`<div class="tile">${esc(short)}<small>${p.type==='Conference'||p.type==='Workshop'?"'"+yr:p.year}</small></div>`}</div>
     <div>
       <div class="titlerow"><h4>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>`:esc(p.title)}</h4>${chips}</div>
       <div class="authors">${authors}</div>
@@ -555,6 +558,7 @@ function renderPubs(){
   const html = years.map(y=>{ const ps=list.filter(p=>p.year===y); return `<div class="year-head"><h3>${y}</h3><span class="count">${ps.length}</span></div>${ps.map(p=>pubRow(p,PF.author)).join('')}`; }).join('');
   document.getElementById('plist').innerHTML = html || `<div class="empty">No papers match. Try a shorter search or clear the filters.</div>`;
   const pc = document.getElementById('pclear'); if(pc) pc.onclick=()=>{ PF.author=null; PF.topic=null; history.replaceState(null,'','#/publications'); renderPubs(); };
+  document.querySelectorAll('#plist [data-fig]').forEach(b=>b.onclick=()=>{ const p=D.pubs.find(x=>x.id===+b.dataset.fig); openLightbox([{img:p.thumb, caption:p.title}], 0); });
   document.querySelectorAll('#plist .m').forEach(b=>b.onclick=()=>{ PF.author = PF.author===+b.dataset.a ? null : +b.dataset.a; history.replaceState(null,'','#/publications'+(PF.author?'?author='+PF.author:'')); renderPubs(); window.scrollTo({top:0,behavior:'smooth'}); });
 }
 function pubsAfter(){
@@ -609,6 +613,7 @@ function openLightbox(items, i){
   const close=()=>{ ov.innerHTML=''; document.removeEventListener('keydown',key); };
   const key=e=>{ if(e.key==='Escape')close(); if(e.key==='ArrowLeft')show(i-1); if(e.key==='ArrowRight')show(i+1); };
   ov.querySelector('.x').onclick=close; ov.querySelector('.l').onclick=()=>show(i-1); ov.querySelector('.r').onclick=()=>show(i+1);
+  if(items.length<2) ov.querySelectorAll('.nav').forEach(n=>n.remove());   // single image: no prev/next
   ov.querySelector('.lightbox').onclick=e=>{ if(e.target.classList.contains('lightbox')) close(); };
   document.addEventListener('keydown',key);
 }
