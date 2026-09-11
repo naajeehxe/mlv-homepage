@@ -1,14 +1,15 @@
 <title>MLV Lab</title>
 <meta name="description" content="Machine Learning and Vision Lab, KAIST">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
 :root{
   --navy:#1B3358; --navy-deep:#0F1F38; --navy-soft:#E8EEF7; --ink:#1F2937; --muted:#6B7280; --line:#E3E7EE;
   --bg:#FFFFFF; --band:#F4F6F9; --surface:#FFFFFF; --accent:#2457A6; --warm:#B7410E; --warm-soft:#FDECE3;
   --shadow:0 1px 2px rgba(15,31,56,.06),0 10px 30px -18px rgba(15,31,56,.25);
-  --body:"Lato","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --body:"Figtree","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;
+  --mono:"Figtree","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;   /* small labels/dates: same face, tabular numbers (no monospace) */
+  --code:ui-monospace,SFMono-Regular,Menlo,monospace;
   --t1:#DCEBFF; --t1i:#1E4E9B; --t2:#DFF5E8; --t2i:#1D6B45; --t3:#F1E4FF; --t3i:#6D2FA0; --t4:#FFE9D6; --t4i:#9A4B00;
   --t5:#DDF3F6; --t5i:#0B6B78; --t6:#FDE2E2; --t6i:#9B1C1C; --t7:#FFF3C7; --t7i:#7A5A00;
   color-scheme:light;
@@ -21,12 +22,12 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
 img{max-width:100%;display:block}
 h1,h2,h3,h4{margin:0;line-height:1.2;text-wrap:balance}
-h1{font-size:clamp(30px,4.2vw,46px);font-weight:900;letter-spacing:-.01em}
-h2{font-size:26px;font-weight:900;color:var(--navy);letter-spacing:-.01em}
+h1{font-size:clamp(30px,4.2vw,46px);font-weight:700;letter-spacing:-.02em}
+h2{font-size:26px;font-weight:700;color:var(--navy);letter-spacing:-.015em}
 h3{font-size:20px;font-weight:700;color:var(--navy)}
 h4{font-size:16px;font-weight:700}
 p{margin:0}
-.label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.label{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
 .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
 .muted{color:var(--muted)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
@@ -39,7 +40,7 @@ p{margin:0}
 /* ---------- header ---------- */
 .top{position:sticky;top:0;z-index:40;background:var(--navy-deep);color:#fff}
 .top .wrap{display:flex;align-items:center;gap:14px;height:66px;max-width:1180px}
-.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:900;font-size:17px;letter-spacing:.02em;white-space:nowrap;text-transform:uppercase;line-height:1.1}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:17px;letter-spacing:.02em;white-space:nowrap;text-transform:uppercase;line-height:1.1}
 .brand:hover{text-decoration:none}
 .brand img{height:32px;width:auto;border-radius:3px;background:#fff;padding:2px}
 .brand small{display:block;font:400 10px/1.3 var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.65);text-transform:uppercase;margin-top:3px}
@@ -50,7 +51,7 @@ nav.tabs a:hover{color:#fff;text-decoration:none}
 nav.tabs a.active{color:#fff;border-bottom-color:#fff}
 .sbtn{display:flex;align-items:center;gap:8px;padding:7px 10px 7px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;color:rgba(255,255,255,.8);font-size:13px;white-space:nowrap;flex:none}
 .sbtn:hover{background:rgba(255,255,255,.1)}
-.sbtn kbd{font-family:var(--mono);font-size:11px;padding:1px 6px;border:1px solid rgba(255,255,255,.3);border-radius:5px}
+.sbtn kbd{font-family:var(--code);font-size:11px;padding:1px 6px;border:1px solid rgba(255,255,255,.3);border-radius:5px}
 .sbtn svg{width:15px;height:15px}
 button.menu{display:none;padding:8px;border-radius:8px;color:#fff}
 @media (max-width:1280px){.brand small{display:none}.sbtn span{display:none}}
@@ -149,11 +150,11 @@ button.chip.on{outline:2px solid var(--navy);outline-offset:1px}
 .person:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
 .person .photo{aspect-ratio:4/5;background:var(--band);overflow:hidden;position:relative;display:block}
 .person .photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.person .photo .init{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:900;color:var(--muted)}
+.person .photo .init{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700;color:var(--muted)}
 .person .photo .ext{position:absolute;right:8px;top:8px;width:26px;height:26px;border-radius:999px;background:rgba(15,31,56,.75);color:#fff;display:flex;align-items:center;justify-content:center}
 .person .photo .ext svg{width:13px;height:13px}
 .person .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
-.person .name{font-weight:900;font-size:17px;color:var(--navy)}
+.person .name{font-weight:700;font-size:17px;color:var(--navy)}
 .person .name a{color:var(--navy)}
 .person .name small{font-weight:400;color:var(--muted);font-size:13px;margin-left:5px}
 .person .pos{font-size:13px;color:var(--muted)}
@@ -185,7 +186,7 @@ table.list td a{color:var(--navy);font-weight:700}
 .filter-note{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:6px;background:var(--navy-soft);color:var(--navy);font-size:14px;margin:12px 0 4px}
 .filter-note button{font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .year-head{display:flex;align-items:baseline;gap:12px;margin:36px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--navy)}
-.year-head h3{font-size:28px;font-weight:900}
+.year-head h3{font-size:28px;font-weight:700}
 .year-head .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .pub{display:grid;grid-template-columns:184px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
 /* fixed 184×115 frame; the whole figure is always shown (object-fit:contain), never cropped or blown up */
@@ -193,7 +194,7 @@ table.list td a{color:var(--navy);font-weight:700}
 .pub .thumb img{width:100%;height:100%;object-fit:contain;padding:4px;box-sizing:border-box;background:#fff}
 .pub .thumb button{width:100%;height:100%;display:block;cursor:zoom-in}
 .pub .thumb button:hover img{opacity:.9}
-.pub .thumb .tile{font:900 20px/1 var(--body);color:var(--navy);text-align:center;padding:10px;letter-spacing:-.01em}
+.pub .thumb .tile{font:700 20px/1 var(--body);color:var(--navy);text-align:center;padding:10px;letter-spacing:-.01em}
 .pub .thumb .tile small{display:block;font:500 11px/1.4 var(--mono);letter-spacing:.08em;color:var(--muted);margin-top:6px}
 .pub h4{font-size:16.5px;line-height:1.35;display:inline}
 .pub h4 a{color:var(--ink)}
@@ -215,21 +216,25 @@ table.list td a{color:var(--navy);font-weight:700}
 .topic{padding:44px 0;border-top:1px solid var(--line);scroll-margin-top:80px}
 .topic:first-of-type{border-top:0}
 .topic .desc{margin-top:14px;max-width:72ch;font-size:15.5px}
-.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:22px}
-.fig{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.fig button{width:100%;display:block}
-.fig img{width:100%;aspect-ratio:16/9;object-fit:contain;background:#fff}
-.fig figcaption{padding:10px 12px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.figs.n1{grid-template-columns:minmax(0,560px)} .figs.n2{grid-template-columns:repeat(2,1fr)} .figs.n4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:900px){.figs,.figs.n4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.figs,.figs.n2,.figs.n4{grid-template-columns:1fr}}
+.fig{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;margin:0}
+.fig button{width:100%;display:block;cursor:zoom-in}
+.fig img{width:100%;aspect-ratio:16/10;object-fit:contain;background:#fff;padding:8px;box-sizing:border-box;display:block}
+.fig figcaption{flex:1;padding:10px 12px;font-size:13px;line-height:1.45;color:var(--muted);border-top:1px solid var(--line);min-height:56px}
 .related{margin-top:22px}
 .related h4{margin-bottom:8px;color:var(--navy)}
-.related li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:14.5px;align-items:baseline}
-.related li .v{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.related li{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px;align-items:start}
+.related li .v{font-family:var(--mono);font-size:12.5px;font-weight:500;line-height:1.4;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.related li{grid-template-columns:1fr;gap:2px}}
 .related li a{color:var(--ink)}
 .related li a:hover{color:var(--navy)}
 
 /* ---------- teaching ---------- */
 .teach-year{margin-top:26px}
-.teach-year h3{font-size:24px;font-weight:900;margin-bottom:6px}
+.teach-year h3{font-size:24px;font-weight:700;margin-bottom:6px}
 
 /* ---------- photos (row-major grid: newest top-left → oldest bottom-right) ---------- */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
@@ -300,7 +305,7 @@ table.list td a{color:var(--navy);font-weight:700}
 /* ---------- footer ---------- */
 footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:36px 0 44px;font-size:13.5px;margin-top:40px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer .fb{color:#fff;font-weight:900;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
+footer .fb{color:#fff;font-weight:700;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
 footer a{color:#fff}
 .note{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.5)}
 </style>
@@ -577,8 +582,8 @@ function researchPage(){
       <div class="label">Topic ${String(t.id).padStart(2,'0')} · ${t.related.length} papers</div>
       <h2 style="margin-top:6px">${esc(t.name)}</h2>
       <p class="desc">${esc(t.desc)}</p>
-      <div class="figs">${t.figures.map((f,i)=>`<figure class="fig"><button data-lb="fig" data-t="${t.id}" data-i="${i}"><img src="${img(f.img)}" alt="" loading="lazy"></button><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}</div>
-      <div class="related"><h4>Representative papers <a href="#/publications?topic=${t.id}" style="font-weight:400;font-size:13.5px;margin-left:8px">Open in Publications →</a></h4><ul class="plain">${t.related.map(x=>`<li><span class="v">${esc(x.venue)}</span><span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`:esc(x.title)}${x.note?` <span class="muted">${esc(x.note)}</span>`:''}</span></li>`).join('')}</ul></div>
+      <div class="figs n${Math.min(t.figures.length,4)}">${t.figures.map((f,i)=>`<figure class="fig"><button data-lb="fig" data-t="${t.id}" data-i="${i}"><img src="${img(f.img)}" alt="" loading="lazy"></button><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}</div>
+      <div class="related"><h4>Representative papers <a href="#/publications?topic=${t.id}" style="font-weight:400;font-size:13.5px;margin-left:8px">Open in Publications →</a></h4><ul class="plain">${t.related.map(x=>`<li><span class="v">${esc(x.venue.replace(/’/g,"'").replace(/(\S)'(\d\d)$/,"$1 '$2"))}</span><span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`:esc(x.title)}${x.note?` <span class="muted">${esc(x.note)}</span>`:''}</span></li>`).join('')}</ul></div>
     </section>`).join('')}
     <div style="height:16px"></div>
   </div>`;
