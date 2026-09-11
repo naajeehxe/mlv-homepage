@@ -320,7 +320,7 @@ def main():
     for r in sort_rows(visible(query_all(ds['videos']))):
         p = r['properties']; vid = prop(p, 'YouTube ID') or re.sub(r'.*(?:v=|youtu\.be/)([\w-]{11}).*', r'\1', prop(p, 'YouTube URL'))
         key = f'yt:{vid}'
-        path = save_image(key, 'social', [f'https://i.ytimg.com/vi/{vid}/mqdefault.jpg'], no_images=no_img)
+        path = save_image(key, 'yt', [f'https://i.ytimg.com/vi/{vid}/hq720.jpg', f'https://i.ytimg.com/vi/{vid}/maxresdefault.jpg', f'https://i.ytimg.com/vi/{vid}/mqdefault.jpg'], no_images=no_img)   # 1280px if available, else 320px
         if path: A[key] = path
         videos.append({'id': vid, 'title': prop(p, 'Title'), 'url': prop(p, 'YouTube URL') or f'https://www.youtube.com/watch?v={vid}', 'thumb': key})
 

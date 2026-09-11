@@ -13,17 +13,18 @@
     "site_content": "4b11c4dc-222f-4cec-b916-a278e8171e32"
   },
   "image_widths": {
-    "person": 480,
-    "photo": 640,
-    "fig": 900,
-    "slide": 1200,
-    "hero": 1800,
-    "collab": 1400,
-    "research_banner": 1800,
+    "person": 800,
+    "photo": 1200,
+    "fig": 1400,
+    "slide": 1600,
+    "hero": 2200,
+    "collab": 1600,
+    "research_banner": 2200,
     "social": 160,
-    "banner_people": 1800,
-    "banner_photos": 1800,
-    "logo": 400
+    "banner_people": 2200,
+    "banner_photos": 2200,
+    "logo": 640,
+    "yt": 640
   },
   "output_dir": "site"
 }
