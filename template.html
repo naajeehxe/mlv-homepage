@@ -581,7 +581,7 @@ function pubsPage(q){
     <div class="topicbar" id="ptopic"><button class="chip all ${PF.topic?'':'on'}" data-v="">Show All</button>${D.topics.map(t=>`<button class="chip t${t.id} ${PF.topic===t.id?'on':''}" data-v="${t.id}">${esc(shortTopic(t))}</button>`).join('')}</div>
     <div class="toolbar"><div class="row">
       <label class="input">${ICON.search}<input id="pq" placeholder="Search title, author, venue…" autocomplete="off"></label>
-      <div class="seg" id="ptype"><button class="on" data-v="">All types</button>${TYPES.map(t=>`<button data-v="${t}">${t}</button>`).join('')}</div>
+      <div class="seg" id="ptype"><button class="on" data-v="">All types</button>${TYPES.filter(t=>D.pubs.filter(p=>p.type===t).length>=2).map(t=>`<button data-v="${t}">${t}</button>`).join('')}</div>
     </div>
     <div class="row" style="margin-top:8px"><div class="seg" id="pyear"><button class="on" data-v="">All years</button>${years.map(y=>`<button data-v="${y}">${y}</button>`).join('')}</div></div>
     <div id="pnote"></div></div>
