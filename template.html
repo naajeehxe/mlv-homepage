@@ -42,7 +42,7 @@ p{margin:0}
 /* ---------- header ---------- */
 .top{position:sticky;top:0;z-index:40;background:var(--navy-deep);color:#fff}
 .top .wrap{display:flex;align-items:center;gap:14px;height:66px;max-width:1280px}
-.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:17px;letter-spacing:.02em;white-space:nowrap;text-transform:uppercase;line-height:1.1}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:17px;letter-spacing:.02em;white-space:nowrap;text-transform:uppercase;line-height:1.1;flex:none}   /* never shrinks → can't overlap the tabs */
 .brand:hover{text-decoration:none}
 .brand img{height:32px;width:auto;border-radius:3px;background:#fff;padding:2px}
 .brand small{display:block;font:500 10px/1.3 var(--mono);letter-spacing:.08em;color:rgba(255,255,255,.65);text-transform:uppercase;margin-top:3px}
