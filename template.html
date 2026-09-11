@@ -114,7 +114,7 @@ section.block.band{background:var(--band)}
 /* ---------- motion: scroll-reveal + hover feedback ---------- */
 .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
 .rv.in{opacity:1;transform:none}
-.pub{transition:background-color .2s ease;border-radius:8px;margin:0 -14px;padding-left:14px;padding-right:14px}
+.pub{transition:background-color .2s ease}
 .pub:hover{background:#F6F8FB;box-shadow:inset 3px 0 0 var(--navy)}
 @media print{.rv{opacity:1;transform:none}}
 .pub .thumb{transition:box-shadow .25s ease}
@@ -216,7 +216,9 @@ table.list td a{color:var(--navy);font-weight:700}
 .year-head{display:flex;align-items:baseline;gap:12px;margin:36px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--navy)}
 .year-head h3{font-size:28px;font-weight:700}
 .year-head .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.pub{display:grid;grid-template-columns:184px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.pub{display:grid;grid-template-columns:184px 1fr;gap:20px;padding:20px 22px;margin:0 -22px;border-radius:10px;position:relative}
+.pub::after{content:'';position:absolute;left:22px;right:22px;bottom:0;border-bottom:1px solid var(--line)}   /* divider stays aligned with the content edge */
+.pub:hover::after{opacity:0}
 /* fixed 184×115 frame; the whole figure is always shown (object-fit:contain), never cropped or blown up */
 .pub .thumb{aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;align-self:start}
 .pub .thumb img{width:100%;height:100%;object-fit:contain;padding:4px;box-sizing:border-box;background:#fff}
@@ -237,7 +239,7 @@ table.list td a{color:var(--navy);font-weight:700}
 .pub .links{margin-top:9px}
 .pub .links a{font-size:12px;padding:4px 9px}
 .pub .note{margin-top:6px;font-size:13px;color:var(--muted)}
-@media (max-width:640px){.pub{grid-template-columns:1fr}.pub .thumb{max-width:260px}}
+@media (max-width:640px){.pub{grid-template-columns:1fr;margin:0 -12px;padding:16px 12px}.pub .thumb{max-width:260px}}
 .empty{padding:40px 0;color:var(--muted);text-align:center}
 
 /* ---------- research ---------- */
