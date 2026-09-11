@@ -346,7 +346,8 @@ def main():
     for i, k in enumerate(['youtube_icon_url', 'facebook_icon_url', 'x_icon_url']):
         path = save_image(f'social:{i}', 'social', [SC.get(k, '')], no_images=no_img)
         if path: A[f'social:{i}'] = path
-    for key in ('research_banner', 'logo'):
+    # research_banner / logo / banner_people / banner_photos: optional Site Content rows "<key>_url" override the snapshot copy
+    for key in ('research_banner', 'logo', 'banner_people', 'banner_photos'):
         path = save_image(key, key, [SC.get(key + '_url', '')], no_images=no_img)
         if path: A[key] = path
     socials = [{'name': 'YouTube', 'url': SC.get('youtube_url', ''), 'icon': 'social:0'},
