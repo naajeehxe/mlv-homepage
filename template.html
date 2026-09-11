@@ -55,7 +55,9 @@ nav.tabs a.active{color:#fff;border-bottom-color:#fff}
 .sbtn:hover{background:rgba(255,255,255,.1)}
 .sbtn kbd{font-family:var(--code);font-size:11px;padding:1px 6px;border:1px solid rgba(255,255,255,.3);border-radius:5px}
 .sbtn svg{width:15px;height:15px}
-button.menu{display:none;padding:8px;border-radius:8px;color:#fff}
+button.menu{display:none;padding:8px;border-radius:999px;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.28)}
+button.menu:hover{background:rgba(255,255,255,.1)}
+button.menu svg{width:18px;height:18px}
 .sbtn span{display:none}   /* compact search button (icon + / key) so all 9 tabs always fit */
 @media (max-width:1500px){.brand small{display:none}}
 @media (max-width:1150px){nav.tabs a{padding:8px 5px;letter-spacing:.02em;font-size:11.5px}}
@@ -108,6 +110,25 @@ section.block.band{background:var(--band)}
 .iconbtn:hover{background:var(--band)}
 .iconbtn svg{width:16px;height:16px}
 @media (prefers-reduced-motion:reduce){.carousel .frame img{transition:none}}
+
+/* ---------- motion: scroll-reveal + hover feedback ---------- */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.rv.in{opacity:1;transform:none}
+.pub{transition:background-color .2s ease;border-radius:8px;margin:0 -14px;padding-left:14px;padding-right:14px}
+.pub:hover{background:#F6F8FB;box-shadow:inset 3px 0 0 var(--navy)}
+@media print{.rv{opacity:1;transform:none}}
+.pub .thumb{transition:box-shadow .25s ease}
+.pub .thumb img{transition:transform .35s ease}
+.pub:hover .thumb img{transform:scale(1.04)}
+.pub:hover .thumb{box-shadow:0 8px 20px rgba(15,31,56,.12)}
+.pub h4 a{transition:color .15s}
+.person,.fig,.video,.pgrid figure{transition:transform .25s ease,box-shadow .25s ease}
+.person:hover,.fig:hover,.video:hover,.pgrid figure:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,31,56,.12)}
+.video .th .play{transition:transform .2s ease,background-color .2s}
+.video:hover .th .play{transform:translate(-50%,-50%) scale(1.12);background:rgba(27,51,88,.85)}
+.chip{transition:filter .15s}
+.topicbar .chip:hover,#ptopic .chip:hover{filter:brightness(.94)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.pub .thumb img,.person,.fig,.video,.pgrid figure{transition:none}}
 /* news */
 .news li{display:grid;grid-template-columns:100px 1fr;gap:18px;padding:12px 0;border-top:1px solid var(--line);align-items:baseline}
 .news li:last-child{border-bottom:1px solid var(--line)}
@@ -405,7 +426,20 @@ function route(){
   document.title = (r==='home'?'':TABS.find(t=>t[0]===r)[1]+' · ')+'MLV Lab';
   window.scrollTo({top:0,behavior:'instant'});
   if(AFTER[r]) AFTER[r](q);
+  reveal();
   if(q.get('t')){ const el=document.getElementById(q.get('t')); if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),50); }
+}
+
+/* ---------- scroll-reveal: cards/rows fade in as they enter the viewport (once) ---------- */
+const REVEAL_SEL = '.pub, .person, .faculty, .fig, .video, .pgrid figure, .news li, .topic, .teach-year, .card, .collab';
+let __io = null;
+function reveal(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  if (!__io) __io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); __io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  const els = [...document.querySelectorAll(REVEAL_SEL)].filter(el => !el.classList.contains('rv'));
+  els.forEach((el, i) => { el.classList.add('rv'); el.style.transitionDelay = (Math.min(i % 12, 8) * 40) + 'ms'; __io.observe(el); });
+  // anything already in view gets shown right away (no flash of empty page)
+  requestAnimationFrame(() => els.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('in'); }));
 }
 
 /* ---------- home ---------- */
@@ -572,6 +606,7 @@ function renderPubs(){
   const html = years.map(y=>{ const ps=list.filter(p=>p.year===y); return `<div class="year-head"><h3>${y}</h3><span class="count">${ps.length}</span></div>${ps.map(p=>pubRow(p,PF.author)).join('')}`; }).join('');
   document.getElementById('plist').innerHTML = html || `<div class="empty">No papers match. Try a shorter search or clear the filters.</div>`;
   const pc = document.getElementById('pclear'); if(pc) pc.onclick=()=>{ PF.author=null; PF.topic=null; history.replaceState(null,'','#/publications'); renderPubs(); };
+  reveal();
   document.querySelectorAll('#plist [data-fig]').forEach(b=>b.onclick=()=>{ const p=D.pubs.find(x=>x.id===+b.dataset.fig); openLightbox([{img:p.thumb, caption:p.title}], 0); });
   document.querySelectorAll('#plist .m').forEach(b=>b.onclick=()=>{ PF.author = PF.author===+b.dataset.a ? null : +b.dataset.a; history.replaceState(null,'','#/publications'+(PF.author?'?author='+PF.author:'')); renderPubs(); window.scrollTo({top:0,behavior:'smooth'}); });
 }
