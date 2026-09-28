@@ -147,6 +147,11 @@ for k, lab in SNAP['labels'].items():
     SNAP_BY_LABEL.setdefault((k.split(':')[0], lab.strip().lower()), k)
 
 def snapshot_file(key=None, kind=None, label=None):
+    # People are matched by NAME first: the positional key (person:<n>) shifts whenever a row is inserted
+    # or re-ordered in Notion, which would hand everyone below the insertion point the wrong photo.
+    if kind == 'person':
+        k = SNAP_BY_LABEL.get((kind, (label or '').strip().lower()))
+        return HERE / 'snapshot' / SNAP['files'][k] if k else None
     if key and key in SNAP['files']: return HERE / 'snapshot' / SNAP['files'][key]
     if kind and label:
         k = SNAP_BY_LABEL.get((kind, label.strip().lower()))

@@ -36,10 +36,12 @@ jobs:
       - run: pip install -r requirements.txt pymupdf requests
       - name: Collect figures
         run: python tools/collect_thumbs.py --only "${{ github.event.inputs.only }}" ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+      - name: Fetch people photos that Notion cannot import (Referer-locked Google Sites images)
+        run: python tools/fetch_people_photos.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add snapshot/img/pubthumb tools/thumb_report.json tools/thumb_debug
+          git add snapshot/img/pubthumb snapshot/img/people snapshot/manifest.json tools/thumb_report.json tools/thumb_debug
           git diff --cached --quiet || git commit -m "Thumbnails: collected publication figures (automated helper)"
           git push
