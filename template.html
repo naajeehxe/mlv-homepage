@@ -410,7 +410,11 @@ const ICON = {
 };
 const TABS = [['home','Home'],['people','People'],['research','Research'],['publications','Publications'],['teaching','Teaching'],['photos','Photos'],['mlvtv','MLV TV'],['contact','Contact'],['openings','Openings']];
 const byId = new Map(D.people.map(p=>[p.id,p]));
-const pubsOf = id => D.pubs.filter(p=>p.members.includes(id));
+// One person can have two People rows (e.g. a post-doc who is also listed under Doctoral Alumni); treat rows with the same name as one author.
+const normName = s => s.toLowerCase().replace(/[^a-z]/g,'');
+const sameIds = new Map(D.people.map(p=>[p.id, D.people.filter(q=>normName(q.name)===normName(p.name)).map(q=>q.id)]));
+const isAuthor = (pub, id) => (sameIds.get(id)||[id]).some(x=>pub.members.includes(x));
+const pubsOf = id => D.pubs.filter(p=>isAuthor(p,id));
 const pubCount = new Map(D.people.map(p=>[p.id,pubsOf(p.id).length]));
 const topicById = new Map(D.topics.map(t=>[t.id,t]));
 const shortTopic = t => ({1:'AGI & Multimodal QA',2:'AI for Science',3:'Generative Models',4:'Visual Understanding',5:'INR & 3D Vision',6:'Safe AI',7:'Medical Imaging'})[t.id] || t.name;
@@ -559,7 +563,7 @@ function pubRow(p, activeAuthor){
   const nn = s => s.toLowerCase().split(/\s+/).filter(w=>w.replace('.','').length>1).join('').replace(/[^a-z]/g,'');
   const authors = p.authors.split(/,\s*/).map(a=>{
     const m = p.members.map(id=>byId.get(id)).find(x=>x && nn(x.name)===nn(a));
-    return m ? `<button class="m ${activeAuthor===m.id?'on':''}" data-a="${m.id}">${esc(a)}</button>` : esc(a);
+    return m ? `<button class="m ${activeAuthor&&(sameIds.get(activeAuthor)||[]).includes(m.id)?'on':''}" data-a="${m.id}">${esc(a)}</button>` : esc(a);
   }).join(', ');
   const links = Object.entries(p.links).map(([k,v])=>`<a href="${esc(v)}" target="_blank" rel="noopener">${esc(k)}</a>`).join('');
   const paper = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Paper</a>` : '';
@@ -598,7 +602,7 @@ function pubsPage(q){
 function renderPubs(){
   let list = D.pubs.slice();
   const q = PF.q.trim().toLowerCase();
-  if(PF.author) list = list.filter(p=>p.members.includes(PF.author));
+  if(PF.author) list = list.filter(p=>isAuthor(p,PF.author));
   if(PF.topic) list = list.filter(p=>(p.topics||[]).includes(PF.topic));
   if(PF.year==='old') list = list.filter(p=>p.year<yearCut); else if(PF.year) list = list.filter(p=>String(p.year)===PF.year);
   if(PF.type) list = list.filter(p=>p.type===PF.type);
