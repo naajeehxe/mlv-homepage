@@ -168,40 +168,47 @@ def find_fig1(doc):
             x0, x1 = pw / 2 + 4, mx1
         col = pymupdf.Rect(x0 - 6, 0, x1 + 6, cr.y0 + 2)
         colw = x1 - x0
+        inside = lambda rr: min(rr.x1, col.x1) - max(rr.x0, col.x0) > 0.5 * rr.width      # mostly within the column
+        # page header (title / authors): wide, large-ish text in the upper part of the page — a figure never reaches above it
+        header_bottom = max((b['rect'].y1 for b in blocks if pno == 0 and b is not cap and b['rect'].width > 0.6 * pw
+                             and b['size'] >= 9.5 and b['rect'].y1 < 0.35 * ph and b['rect'].y1 <= cr.y0), default=0)
         # graphics: embedded images + vector drawings
         gr = [pymupdf.Rect(i['bbox']) for i in page.get_image_info()]
         for d in page.get_drawings():
             r = d['rect']
             if r.width < 0.5 and r.height < 0.5: continue
             if (r.height < 1.2 and r.width > 0.7 * colw) or (r.width < 1.2 and r.height > 120): continue   # rules
+            if r.width > 0.9 * pw or r.height > 0.6 * ph: continue                                        # page-size backgrounds
             gr.append(r)
         cands = []
         for r in gr:
-            if r.y1 > cr.y0 + 3 or r.y0 < 0 or r.width <= 0: continue
-            ov = min(r.x1, col.x1) - max(r.x0, col.x0)
-            if ov < 0.5 * r.width: continue
+            if r.y1 > cr.y0 + 3 or r.y0 < header_bottom - 2 or r.width <= 0: continue
+            if not inside(r): continue
             cands.append(r)
         cands.sort(key=lambda r: -r.y1)
-        body = [b for b in blocks if b['nlines'] >= 3 and b['rect'].width > 0.6 * colw and b is not cap
-                and min(b['rect'].x1, col.x1) - max(b['rect'].x0, col.x0) > 0.5 * b['rect'].width]
+        # blocks that end a figure when they sit between two graphic pieces: paragraphs (2+ lines spanning the
+        # column) and other captions ("Table 1", "Figure 2" …)
+        STOP_RE = re.compile(r'^\s*(Table|Figure|Fig\.?)\s*\d', re.I)
+        body = [b for b in blocks if b is not cap and inside(b['rect']) and
+                ((b['nlines'] >= 2 and b['rect'].width > 0.6 * colw) or STOP_RE.match(b['text']))]
         top = cr.y0; cluster = None
         for r in cands:
             if r.y1 < top - GAP: break
-            # a paragraph sitting between this piece and the current cluster ends the figure
             if any(bb['rect'].y0 >= r.y1 - 2 and bb['rect'].y1 <= top + 2 for bb in body): break
             cluster = r if cluster is None else cluster | r
             top = min(top, r.y0)
         if cluster is None or cluster.height < 40 or cluster.width < 80:
             # fallback: everything between the previous paragraph and the caption
             above = [bb for bb in body if bb['rect'].y1 <= cr.y0]
-            y0 = max((bb['rect'].y1 for bb in above), default=40) + 4
+            y0 = max([bb['rect'].y1 for bb in above] + [header_bottom], default=40) + 4
             cluster = pymupdf.Rect(x0, y0, x1, cr.y0 - 2)
             if cluster.height < 40: continue
-        # pull in small text pieces that belong to the figure (axis labels, legends)
+        # pull in small text pieces that belong to the figure (axis labels, legends) — same column only
         for bb in blocks:
             if bb is cap: continue
             br = bb['rect']
-            if br.y1 > cr.y0 + 1 or br.y0 < cluster.y0 - 14 or any(bb is x for x in body): continue
+            if br.y1 > cr.y0 + 1 or br.y0 < max(cluster.y0 - 14, header_bottom) or any(bb is x for x in body): continue
+            if not inside(br): continue
             inter = br & cluster
             if (inter.is_valid and inter.get_area() > 0.3 * br.get_area()) or (abs(br.y1 - cluster.y0) < 14 and bb['nlines'] <= 2 and br.width < 0.5 * colw):
                 cluster |= br
@@ -244,7 +251,7 @@ def pdf_url_for(paper):
 # ----------------------------------------------------------------------------- main
 def process(p, force=False):
     order = p['order']; rep = {'order': order, 'pid': p.get('pid'), 'title': p['title']}
-    if not force:
+    if not force and not p.get('force'):          # "force": true in thumb_requests.json re-collects that one paper
         for ext in ('png', 'jpg'):
             if os.path.exists(os.path.join(OUT, f'{order}.{ext}')):
                 rep.update(status='kept', file=f'snapshot/img/pubthumb/{order}.{ext}'); return rep
@@ -260,7 +267,8 @@ def process(p, force=False):
         except Exception as e:
             tried.append(f'readme: {e}')
     # 2) arXiv HTML first figure
-    a = arxiv_id(p.get('paper')) or arxiv_search(p['title'])
+    a = arxiv_id(p.get('paper')) or p.get('arxiv') or arxiv_search(p['title'])
+    if not a: tried.append('arxiv: no id in link and no exact title match')
     if a:
         rep['arxiv'] = a
         for base in (f'https://arxiv.org/html/{a}', f'https://ar5iv.labs.arxiv.org/html/{a}'):
@@ -275,9 +283,10 @@ def process(p, force=False):
                     tried.append(f'{base}: {why}')
             except Exception as e:
                 tried.append(f'{base}: {e}')
-    # 3) Figure 1 cropped from the PDF
-    pu = pdf_url_for(p.get('paper')) or (f'https://arxiv.org/pdf/{a}' if a else None)
-    if pu:
+    # 3) Figure 1 cropped from the PDF (the linked PDF first, then the arXiv PDF)
+    pu = pdf_url_for(p.get('paper'))
+    pdfs = [u for u in dict.fromkeys([pu, f'https://arxiv.org/pdf/{a}' if a else None]) if u]
+    for pu in pdfs:
         try:
             r = get(pu)
             if r.content[:5] == b'%PDF-':

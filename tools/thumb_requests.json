@@ -53,7 +53,8 @@
   "title": "DocPrune: Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
   "paper": "https://openaccess.thecvf.com/content/CVPR2026/papers/Choi_DocPrune_Efficient_Document_Question_Answering_via_Background_Question_and_Comprehension-aware_CVPR_2026_paper.pdf",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 8,
@@ -173,7 +174,8 @@
   "title": "Captioning for Text-Video Retrieval via Dual-Group Direct Preference Optimization",
   "paper": "https://arxiv.org/abs/2509.16560",
   "code": "https://github.com/mlvlab/CaReDPO",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 23,
@@ -197,7 +199,8 @@
   "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
   "paper": "https://arxiv.org/pdf/2410.17434",
   "code": "https://github.com/Vision-CAIR/LongVU",
-  "readme_img": "https://longvu.s3.amazonaws.com/assets/demo.gif"
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 26,
@@ -205,7 +208,8 @@
   "title": "Multidimensional Adaptive Coefficient for Inference Trajectory Optimization in Flow and Diffusion",
   "paper": "https://arxiv.org/pdf/2404.14161",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 27,
@@ -301,7 +305,8 @@
   "title": "Open-Vocabulary Video Question Answering: A New Benchmark for Evaluating the Generalizability of Video Question Answering Models",
   "paper": "https://arxiv.org/pdf/2308.09363.pdf",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 53,
@@ -309,7 +314,8 @@
   "title": "Distribution-Aware Prompt Tuning for Vision-Language Models",
   "paper": "https://arxiv.org/pdf/2309.03406.pdf",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 55,
@@ -437,7 +443,8 @@
   "title": "Consistency Learning via Decoding Path Augmentation for Transformers in Human Object Interaction Detection",
   "paper": "https://openaccess.thecvf.com/content/CVPR2022/html/Park_Consistency_Learning_via_Decoding_Path_Augmentation_for_Transformers_in_Human_CVPR_2022_paper.html",
   "code": "https://github.com/mlvlab/CPC_HOI",
-  "readme_img": "https://user-images.githubusercontent.com/70801434/173210572-5d340252-bc9f-4adb-9034-600837f201a7.gif"
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 72,
@@ -461,7 +468,8 @@
   "title": "Graph Transformer Networks: Learning Meta-path Graphs to Improve GNNs",
   "paper": "https://www.sciencedirect.com/science/article/pii/S0893608022002003?utm_campaign=STMJ_AUTH_SERV_PUBLISHED&utm_medium=email&utm_acid=156305126&SIS_ID=&dgcid=STMJ_AUTH_SERV_PUBLISHED&CMX_ID=&utm_in=DM265225&utm_source=AC_",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "arxiv": "2106.06218"
  },
  {
   "order": 75,
@@ -629,7 +637,8 @@
   "title": "ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification",
   "paper": "https://arxiv.org/abs/1904.03775",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 96,
@@ -677,7 +686,8 @@
   "title": "Finding Differentially Covarying Needles in a Temporally Evolving Haystack: A Scan Statistics Perspective",
   "paper": "https://arxiv.org/abs/1711.07575",
   "code": "",
-  "readme_img": null
+  "readme_img": null,
+  "force": true
  },
  {
   "order": 102,
