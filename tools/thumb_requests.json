@@ -1,0 +1,794 @@
+[
+ {
+  "order": 1,
+  "pid": "W4",
+  "title": "SVMemAgent: A Streaming Video Memory Agent for Query-Agnostic Online Frame Selection",
+  "paper": "",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 2,
+  "pid": "C81",
+  "title": "Context Blindness in DPO: Mitigating Object Hallucination in MLLMs via Context-Calibrated Preference Optimization",
+  "paper": "https://arxiv.org/pdf/2608.12158",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 3,
+  "pid": "C80",
+  "title": "F⁴Splat: Feed-Forward Predictive Densification for Feed-Forward 3D Gaussian Splatting",
+  "paper": "https://arxiv.org/pdf/2603.21304",
+  "code": "https://mlvlab.github.io/F4Splat/",
+  "readme_img": null
+ },
+ {
+  "order": 4,
+  "pid": "C79",
+  "title": "VideoSearch-R1: Iterative Video Retrieval and Reasoning via Soft Query Refinement",
+  "paper": "https://arxiv.org/pdf/2607.00446",
+  "code": "https://mlvlab.github.io/VideoSearch-R1/",
+  "readme_img": null
+ },
+ {
+  "order": 5,
+  "pid": "C78",
+  "title": "MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2026/papers/Ko_MoE-GRPO_Optimizing_Mixture-of-Experts_via_Reinforcement_Learning_in_Vision-Language_Models_CVPR_2026_paper.pdf",
+  "code": "https://github.com/mlvlab/MoE-GRPO",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/MoE-GRPO/main/images/pipeline.png"
+ },
+ {
+  "order": 6,
+  "pid": "C77",
+  "title": "RegFormer: Transferable Relational Grounding for Efficient Weakly-Supervised Human-Object Interaction Detection",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2026/papers/Park_RegFormer_Transferable_Relational_Grounding_for_Efficient_Weakly-Supervised_Human-Object_Interaction_Detection_CVPR_2026_paper.pdf",
+  "code": "https://github.com/mlvlab/RegFormer",
+  "readme_img": null
+ },
+ {
+  "order": 7,
+  "pid": "C76",
+  "title": "DocPrune: Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2026/papers/Choi_DocPrune_Efficient_Document_Question_Answering_via_Background_Question_and_Comprehension-aware_CVPR_2026_paper.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 8,
+  "pid": "J21",
+  "title": "AI for atmosphere-ocean sciences: advancements, challenges, and ways forward",
+  "paper": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag063/8444589",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 9,
+  "pid": "C75",
+  "title": "Error as Signal: Stiffness-Aware Diffusion Sampling via Embedded Runge-Kutta Guidance",
+  "paper": "https://arxiv.org/pdf/2603.03692",
+  "code": "https://github.com/mlvlab/ERK-Guid",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/ERK-Guid/main/assets/main.png"
+ },
+ {
+  "order": 10,
+  "pid": "C74",
+  "title": "SPRINT: Sparse-Dense Residual Fusion for Efficient Diffusion Transformers",
+  "paper": "https://arxiv.org/abs/2510.21986",
+  "code": "https://snap-research.github.io/Sprint/",
+  "readme_img": null
+ },
+ {
+  "order": 11,
+  "pid": "C73",
+  "title": "Relevance-aware Multi-context Contrastive Decoding for Retrieval-augmented Visual Question Answering",
+  "paper": "https://arxiv.org/pdf/2602.06050",
+  "code": "https://github.com/mlvlab/RMCD",
+  "readme_img": null
+ },
+ {
+  "order": 12,
+  "pid": "C72",
+  "title": "Transferable Model-agnostic Vision-Language Model Adaptation for Efficient Weak-to-Strong Generalization",
+  "paper": "https://arxiv.org/abs/2508.08604",
+  "code": "https://github.com/mlvlab/TransMiter",
+  "readme_img": null
+ },
+ {
+  "order": 13,
+  "pid": "C71",
+  "title": "Improving Large Molecular Language Model via Relation-aware Multimodal Collaboration",
+  "paper": "https://arxiv.org/pdf/2601.12256",
+  "code": "https://github.com/mlvlab/CoLLaMo",
+  "readme_img": null
+ },
+ {
+  "order": 14,
+  "pid": "C70",
+  "title": "TabFlash: Efficient Table Understanding with Progressive Question Conditioning and Token Focusing",
+  "paper": "https://arxiv.org/abs/2511.13283",
+  "code": "https://github.com/mlvlab/TabFlash",
+  "readme_img": null
+ },
+ {
+  "order": 15,
+  "pid": "J20",
+  "title": "Improved Query Specialization for Transformer-based Visual Relationship Detection",
+  "paper": "https://doi.org/10.1016/j.ins.2025.122668",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 16,
+  "pid": "J18",
+  "title": "Parameter-Efficient Fine-Tuning via Meta-Regularizer",
+  "paper": "https://links.springernature.com/f/a/Qc0YmOnr6UsyqNmWP7c9pg~~/AABE5hA~/Jj8S00Jwx3XNmzNQdImxPqJrX7djXOHEYPnl1Bb7Zz0Zx6C3AK1ja_EQUqHzXEk0elrp44dOvDVWJTM3pq1YxhIi29w6cOv1yHsm3fwjcBzc34736nhP9wTnTwZe-iqkwt72ZKoS8z_D696D0tkrCrV4fZv3U7rlpo_CZIMPJeltrV24yjS3Bb-RRoT7GgRhgGiy3uMjyrYBkHwyaQM1BeUhkBtsYyf-DFnErqwRLnmmDdGR9hR_Xep9T_JzLPj8jNcy_HrzXq3-EvDObBbtkVKMZP9oYO3cIFIxb09BaLw~",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 17,
+  "pid": "J19",
+  "title": "In-cell neuromorphic computing in solid oxide fuel cells for bifunctional electrochemical power generation and artificial intelligence",
+  "paper": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4991417",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 18,
+  "pid": "C69",
+  "title": "Blockwise Flow Matching: Improving Flow Matching Models For Efficient High-Quality Generation",
+  "paper": "https://arxiv.org/abs/2510.21167",
+  "code": "https://github.com/mlvlab/Blockwise-Flow-Matching",
+  "readme_img": null
+ },
+ {
+  "order": 19,
+  "pid": "C68",
+  "title": "DeepVideo-R1: Video Reinforcement Fine-Tuning via Difficulty-aware Regressive GRPO",
+  "paper": "https://arxiv.org/abs/2506.07464",
+  "code": "https://github.com/mlvlab/DeepVideoR1",
+  "readme_img": null
+ },
+ {
+  "order": 20,
+  "pid": "C67",
+  "title": "PRESTO: Preimage-Informed Instruction Optimization for Prompting Black-Box LLMs",
+  "paper": "https://arxiv.org/abs/2510.25808",
+  "code": "https://github.com/mlvlab/PRESTO",
+  "readme_img": null
+ },
+ {
+  "order": 21,
+  "pid": "C66",
+  "title": "Visual Diversity and Region-aware Prompt Learning for Zero-shot HOI Detection",
+  "paper": "https://arxiv.org/abs/2510.25094",
+  "code": "https://github.com/mlvlab/VDRP",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/VDRP/main/assets/Overall_figure.png"
+ },
+ {
+  "order": 22,
+  "pid": "C65",
+  "title": "Captioning for Text-Video Retrieval via Dual-Group Direct Preference Optimization",
+  "paper": "https://arxiv.org/abs/2509.16560",
+  "code": "https://github.com/mlvlab/CaReDPO",
+  "readme_img": null
+ },
+ {
+  "order": 23,
+  "pid": "C64",
+  "title": "Bidirectional Likelihood Estimation with Multi-Modal Large Language Models for Text-Video Retrieval",
+  "paper": "https://arxiv.org/pdf/2507.23284",
+  "code": "https://github.com/mlvlab/BLiM",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/BLiM/main/asset/main.png"
+ },
+ {
+  "order": 24,
+  "pid": "C63",
+  "title": "Representation Shift: Unifying Token Compression with FlashAttention",
+  "paper": "https://www.arxiv.org/pdf/2508.00367",
+  "code": "https://github.com/mlvlab/Representation-Shift",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/Representation-Shift/main/asset/framework.jpg"
+ },
+ {
+  "order": 25,
+  "pid": "C62",
+  "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+  "paper": "https://arxiv.org/pdf/2410.17434",
+  "code": "https://github.com/Vision-CAIR/LongVU",
+  "readme_img": "https://longvu.s3.amazonaws.com/assets/demo.gif"
+ },
+ {
+  "order": 26,
+  "pid": "C61",
+  "title": "Multidimensional Adaptive Coefficient for Inference Trajectory Optimization in Flow and Diffusion",
+  "paper": "https://arxiv.org/pdf/2404.14161",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 27,
+  "pid": "C60",
+  "title": "When Model Knowledge meets Diffusion Model: Diffusion-assisted Data-free Image Synthesis with Alignment of Domain and Class",
+  "paper": "https://arxiv.org/pdf/2506.15381",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 30,
+  "pid": "J16",
+  "title": "Conductive-bridge interlayer contacts for two-dimensional optoelectronic devices",
+  "paper": "https://www.nature.com/articles/s41928-025-01339-9",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 39,
+  "pid": "C50",
+  "title": "Understanding Multi-compositional Learning in Vision and Language Models via Category Theory",
+  "paper": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06472.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 40,
+  "pid": "C49",
+  "title": "Stochastic Conditional Diffusion Models for Robust Semantic Image Synthesis",
+  "paper": "https://arxiv.org/pdf/2402.16506",
+  "code": "https://github.com/mlvlab/SCDM",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/SCDM/main/asset/framework.png"
+ },
+ {
+  "order": 41,
+  "pid": "C48",
+  "title": "vid-TLDR: Training Free Token merging for Light-weight Video Transformer",
+  "paper": "https://arxiv.org/pdf/2403.13347",
+  "code": "https://github.com/mlvlab/vid-TLDR",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/vid-TLDR/main/img/framework.jpg"
+ },
+ {
+  "order": 44,
+  "pid": "C45",
+  "title": "Prompt Learning via Meta-Regularization",
+  "paper": "https://arxiv.org/pdf/2404.00851",
+  "code": "https://github.com/mlvlab/ProMetaR",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/ProMetaR/main/docs/prometar.png"
+ },
+ {
+  "order": 45,
+  "pid": "C44",
+  "title": "Retrieval-Augmented Open-Vocabulary Object Detection",
+  "paper": "https://arxiv.org/pdf/2404.05687",
+  "code": "https://github.com/mlvlab/RALF",
+  "readme_img": "https://github.com/user-attachments/assets/09e8ac36-135e-42cd-a6f2-877288e4a3da"
+ },
+ {
+  "order": 47,
+  "pid": "",
+  "title": "Robust Multimodal 3D Object Detection via Modality-Agnostic Decoding and Proximity-based Modality Ensemble",
+  "paper": "https://arxiv.org/pdf/2407.19156",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 48,
+  "pid": "C42",
+  "title": "Large Language Models are Temporal and Causal Reasoners for Video Question Answering",
+  "paper": "https://arxiv.org/pdf/2310.15747.pdf",
+  "code": "https://github.com/mlvlab/Flipped-VQA",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/Flipped-VQA/main/asset/main.png"
+ },
+ {
+  "order": 49,
+  "pid": "C41",
+  "title": "NuTrea: Neural Tree Search for Context-guided Multi-hop KGQA",
+  "paper": "https://arxiv.org/pdf/2310.15484.pdf",
+  "code": "https://github.com/mlvlab/NuTrea",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/NuTrea/main/assets/main_fig.png"
+ },
+ {
+  "order": 50,
+  "pid": "C40",
+  "title": "Advancing Bayesian Optimization via Learning Correlated Latent Spaces",
+  "paper": "https://arxiv.org/pdf/2310.20258.pdf",
+  "code": "https://github.com/mlvlab/CoBO",
+  "readme_img": "https://github.com/mlvlab/CoBO/assets/29230924/6cffa825-4c02-4f08-acd2-31e546c4458d"
+ },
+ {
+  "order": 52,
+  "pid": "C38",
+  "title": "Open-Vocabulary Video Question Answering: A New Benchmark for Evaluating the Generalizability of Video Question Answering Models",
+  "paper": "https://arxiv.org/pdf/2308.09363.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 53,
+  "pid": "C37",
+  "title": "Distribution-Aware Prompt Tuning for Vision-Language Models",
+  "paper": "https://arxiv.org/pdf/2309.03406.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 55,
+  "pid": "C35",
+  "title": "Read-only Prompt Optimization for Vision-Language Few-shot Learning",
+  "paper": "https://arxiv.org/pdf/2308.14960v1.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 56,
+  "pid": "C34",
+  "title": "Robust Camera Pose Refinement for Multi-Resolution Hash Encoding",
+  "paper": "https://arxiv.org/abs/2302.01571",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 57,
+  "pid": "C33",
+  "title": "MELTR: Meta Loss Transformer for Learning to Fine-tune Video Foundation Models",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2023/papers/Ko_MELTR_Meta_Loss_Transformer_for_Learning_To_Fine-Tune_Video_Foundation_CVPR_2023_paper.pdf",
+  "code": "https://github.com/mlvlab/MELTR",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/MELTR/master/asset/main.png"
+ },
+ {
+  "order": 58,
+  "pid": "C32",
+  "title": "Self-positioning Point-based Transformer for Point Cloud Understanding",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2023/papers/Park_Self-Positioning_Point-Based_Transformer_for_Point_Cloud_Understanding_CVPR_2023_paper.pdf",
+  "code": "https://github.com/mlvlab/SPoTr",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/SPoTr/main/assets/main_figure.png"
+ },
+ {
+  "order": 59,
+  "pid": "C31",
+  "title": "Relation-aware Language-Graph Transformer for Question Answering",
+  "paper": "https://arxiv.org/pdf/2212.00975.pdf",
+  "code": "https://github.com/mlvlab/qat",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/qat/main/main_figure.png"
+ },
+ {
+  "order": 60,
+  "pid": "J15",
+  "title": "Self-Powering Sensory Device with Multi-Spectrum Image Realization for Smart Indoor Environments",
+  "paper": "https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202307523",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 61,
+  "pid": "J14",
+  "title": "Recurrent DETR: Transformer-based Object Detection for Crowded Scenes",
+  "paper": "https://ieeexplore.ieee.org/document/10177153?source=authoralert",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 62,
+  "pid": "J13",
+  "title": "Robust Auxiliary Learning with Weighting Function for Biased Data",
+  "paper": "https://www.sciencedirect.com/science/article/pii/S0020025523000981",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 63,
+  "pid": "J12",
+  "title": "Deep Neural Network for Solving Differential Equations Motivated by Legendre-Galerkin Approximation",
+  "paper": "https://arxiv.org/pdf/2010.12975",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 64,
+  "pid": "J11",
+  "title": "Deep Learning based Detection for Multiple Cache Side-channel Attacks",
+  "paper": "https://ieeexplore.ieee.org/document/10345632",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 65,
+  "pid": "W3",
+  "title": "Concept Bottleneck with Visual Concept Filtering for Explainable Medical Image Classification",
+  "paper": "https://arxiv.org/abs/2308.11920",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 66,
+  "pid": "C30",
+  "title": "SageMix: Saliency-Guided Mixup for Point Clouds",
+  "paper": "https://openreview.net/pdf?id=q-FRENiEP_d",
+  "code": "https://github.com/mlvlab/SageMix",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/SageMix/master/assets/figure_main.jpg"
+ },
+ {
+  "order": 67,
+  "pid": "C29",
+  "title": "Invertible Monotone Operators for Normalizing Flows",
+  "paper": "https://openreview.net/pdf?id=USoYIT4IQz",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 69,
+  "pid": "C27",
+  "title": "k-SALSA: k-anonymous synthetic averaging of retinal images via local style alignment",
+  "paper": "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136810652.pdf",
+  "code": "https://github.com/hcholab/k-salsa",
+  "readme_img": null
+ },
+ {
+  "order": 70,
+  "pid": "C26",
+  "title": "Video-Text Representation Learning via Differentiable Weak Temporal Alignment",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2022/papers/Ko_Video-Text_Representation_Learning_via_Differentiable_Weak_Temporal_Alignment_CVPR_2022_paper.pdf",
+  "code": "https://github.com/mlvlab/VT-TWINS",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/VT-TWINS/main/asset/main.png"
+ },
+ {
+  "order": 71,
+  "pid": "C25",
+  "title": "Consistency Learning via Decoding Path Augmentation for Transformers in Human Object Interaction Detection",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2022/html/Park_Consistency_Learning_via_Decoding_Path_Augmentation_for_Transformers_in_Human_CVPR_2022_paper.html",
+  "code": "https://github.com/mlvlab/CPC_HOI",
+  "readme_img": "https://user-images.githubusercontent.com/70801434/173210572-5d340252-bc9f-4adb-9034-600837f201a7.gif"
+ },
+ {
+  "order": 72,
+  "pid": "C24",
+  "title": "Deformable Graph Convolutional Networks",
+  "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/20765/20524",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 73,
+  "pid": "J10",
+  "title": "Randomly Shuffled Convolution for Self-Supervised Representation Learning",
+  "paper": "https://www.sciencedirect.com/science/article/pii/S0020025522013032?via%3Dihub",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 74,
+  "pid": "J9",
+  "title": "Graph Transformer Networks: Learning Meta-path Graphs to Improve GNNs",
+  "paper": "https://www.sciencedirect.com/science/article/pii/S0893608022002003?utm_campaign=STMJ_AUTH_SERV_PUBLISHED&utm_medium=email&utm_acid=156305126&SIS_ID=&dgcid=STMJ_AUTH_SERV_PUBLISHED&CMX_ID=&utm_in=DM265225&utm_source=AC_",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 75,
+  "pid": "J8",
+  "title": "Explainable Time-series Prediction using a Residual Network and Gradient-based methods",
+  "paper": "https://ieeexplore.ieee.org/document/9916238/",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 76,
+  "pid": "J7",
+  "title": "Single cell lineage reconstruction using distance-based algorithms and the R package, DCLEAR",
+  "paper": "https://pubmed.ncbi.nlm.nih.gov/35331133/",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 77,
+  "pid": "",
+  "title": "Deformable Graph Transformer",
+  "paper": "https://arxiv.org/abs/2206.14337",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 78,
+  "pid": "C23",
+  "title": "Metropolis-Hastings Data Augmentation for Graph Neural Networks",
+  "paper": "https://proceedings.neurips.cc/paper/2021/hash/9e7ba617ad9e69b39bd0c29335b79629-Abstract.html",
+  "code": "https://github.com/mlvlab/Metropolis-Hastings-Data-Augmentation-for-Graph-Neural-Networks",
+  "readme_img": "https://github.com/hyeonzini/Metropolis-Hastings-Data-Augmentation-for-Graph-Neural-Networks/blob/main/Figures/main_figure.png"
+ },
+ {
+  "order": 79,
+  "pid": "C22",
+  "title": "Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks for Link Prediction",
+  "paper": "https://proceedings.neurips.cc/paper/2021/hash/71ddb91e8fa0541e426a54e538075a5a-Abstract.html",
+  "code": "https://github.com/seongjunyun/Neo-GNNs",
+  "readme_img": null
+ },
+ {
+  "order": 80,
+  "pid": "C21",
+  "title": "Point Cloud Augmentation with Weighted Local Transformations",
+  "paper": "https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Point_Cloud_Augmentation_With_Weighted_Local_Transformations_ICCV_2021_paper.pdf",
+  "code": "https://github.com/mlvlab/PointWOLF",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/PointWOLF/master/assets/PointWOLF_main.png"
+ },
+ {
+  "order": 81,
+  "pid": "C20",
+  "title": "HOTR: End-to-End Human-Object Interaction Detection with Transformers",
+  "paper": "https://openaccess.thecvf.com/content/CVPR2021/html/Kim_HOTR_End-to-End_Human-Object_Interaction_Detection_With_Transformers_CVPR_2021_paper.html",
+  "code": "https://github.com/mlvlab/HOTR",
+  "readme_img": "https://raw.githubusercontent.com/mlvlab/HOTR/main/imgs/hotr_pipeline.png"
+ },
+ {
+  "order": 82,
+  "pid": "J6",
+  "title": "Learning Augmentation for GNNs with Consistency Regularization",
+  "paper": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9535521",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 83,
+  "pid": "J5",
+  "title": "Learning to Balance Local Losses via Meta-Learning",
+  "paper": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9541196",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 84,
+  "pid": "J4",
+  "title": "Learning Non-parametric Surrogate Losses with Correlated Gradients",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/9570322",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 85,
+  "pid": "J3",
+  "title": "Search-and-Attack: Temporally SparseAdversarial Perturbations on Videos",
+  "paper": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9592758",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 86,
+  "pid": "J2",
+  "title": "Self-Supervised Learning for Anomaly Detection with Dynamic Local Augmentation",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/9597511",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 87,
+  "pid": "",
+  "title": "Self-supervised Auxiliary Learning for Graph Neural Networks via Meta-Learning",
+  "paper": "https://arxiv.org/abs/2103.00771",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 88,
+  "pid": "",
+  "title": "Graph Transformer Networks: Learning Meta-path Graphs to Improve GNNs",
+  "paper": "https://arxiv.org/abs/2106.06218",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 89,
+  "pid": "C19",
+  "title": "Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs",
+  "paper": "https://arxiv.org/abs/2007.08294",
+  "code": "https://github.com/mlvlab/SELAR",
+  "readme_img": "https://github.com/mlvlab/SELAR/blob/main/Figure_Main.png"
+ },
+ {
+  "order": 90,
+  "pid": "C18",
+  "title": "UnionDet: Union-Level Detector Towards Real-Time Human-Object Interaction Detection",
+  "paper": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600494.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 91,
+  "pid": "C17",
+  "title": "Robust Neural Networks inspired by Strong Stability Preserving Runge-Kutta methods",
+  "paper": "http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540392.pdf",
+  "code": "https://github.com/matbambbang/sspnet",
+  "readme_img": null
+ },
+ {
+  "order": 92,
+  "pid": "C16",
+  "title": "Graph Transformer Networks",
+  "paper": "https://papers.nips.cc/paper/9367-graph-transformer-networks.pdf",
+  "code": "https://github.com/seongjunyun/Graph_Transformer_Networks",
+  "readme_img": "https://github.com/seongjunyun/Graph_Transformer_Networks/blob/master/GTN.png"
+ },
+ {
+  "order": 93,
+  "pid": "C15",
+  "title": "Sampling-free Uncertainty Estimation in Gated Recurrent Units with Applications to Normative Modeling in Neuroimaging",
+  "paper": "http://proceedings.mlr.press/v115/hwang20a/hwang20a.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 94,
+  "pid": "C14",
+  "title": "Mixed Effects Neural Networks (MeNets) with Applications to Gaze Estimation",
+  "paper": "http://openaccess.thecvf.com/content_CVPR_2019/html/Xiong_Mixed_Effects_Neural_Networks_MeNets_With_Applications_to_Gaze_Estimation_CVPR_2019_paper.html",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 95,
+  "pid": "W2",
+  "title": "ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification",
+  "paper": "https://arxiv.org/abs/1904.03775",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 96,
+  "pid": "C13",
+  "title": "On Training Deep 3D CNN Models with Dependent Samples in Neuroimaging",
+  "paper": "https://link.springer.com/chapter/10.1007/978-3-030-20351-1_8",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 97,
+  "pid": "J1",
+  "title": "Localizing differentially evolving covariance structures via scan statistics",
+  "paper": "http://www.ams.org/journals/qam/2019-77-02/S0033-569X-2018-01522-9/",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 98,
+  "pid": "",
+  "title": "Sampling-free Uncertainty Estimation in Gated Recurrent Units with Exponential Families",
+  "paper": "https://arxiv.org/abs/1804.07351",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 99,
+  "pid": "C12",
+  "title": "Efficient Relative Attribute Learning using Graph Neural Networks",
+  "paper": "http://openaccess.thecvf.com/content_ECCV_2018/papers/Zihang_Meng_Efficient_Relative_Attribute_ECCV_2018_paper.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 100,
+  "pid": "C11",
+  "title": "Tensorize, Factorize and Regularize: Robust Visual Relationship Learning",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/papers/cvpr2018_hwang.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 101,
+  "pid": "",
+  "title": "Finding Differentially Covarying Needles in a Temporally Evolving Haystack: A Scan Statistics Perspective",
+  "paper": "https://arxiv.org/abs/1711.07575",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 102,
+  "pid": "",
+  "title": "Statistical Learning Models for Manifold-valued Measurements with Applications to Computer Vision and Neuroimaging",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/papers/thesis-hyunwoo-j-kim.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 103,
+  "pid": "C10",
+  "title": "Maximizing Subset Accuracy with Recurrent Neural Networks in Multi-label Classification",
+  "paper": "https://papers.nips.cc/paper/7125-maximizing-subset-accuracy-with-recurrent-neural-networks-in-multi-label-classification",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 104,
+  "pid": "C9",
+  "title": "Riemannian Nonlinear Mixed Effects Models: Analyzing Longitudinal Deformations in Neuroimaging",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/projects/riem-mem/",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 105,
+  "pid": "W1",
+  "title": "Riemannian Variance Filtering: An Independent Filtering Scheme for Statistical Tests on Manifold-valued Data",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/papers/rvf-cvprw-2017.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 106,
+  "pid": "C8",
+  "title": "Cover Song Identification with Metric Learning Using Distance as a Feature",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/papers/ismir2017_cover_song_identification.pdf",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 107,
+  "pid": "C7",
+  "title": "Abundant Inverse Regression using Sufficient Reduction and its Applications",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/projects/air/",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 108,
+  "pid": "C6",
+  "title": "Latent Variable Graphical Model Selection using Harmonic Analysis: Applications to the Human Connectome Project (HCP)",
+  "paper": "https://pages.cs.wisc.edu/~hwkim/projects/lvgm/",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 109,
+  "pid": "C5",
+  "title": "Interpolation on the manifold of k-component Gaussian Mixture Models (GMMs)",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/projects/k-gmm",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 110,
+  "pid": "C4",
+  "title": "Manifold-valued Dirichlet Processes",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/projects/dp-mglm",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 111,
+  "pid": "",
+  "title": "Canonical Correlation Analysis on SPD(n) Manifolds",
+  "paper": "http://www.springer.com/us/book/9783319229560?token=prtst0416p",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 112,
+  "pid": "C3",
+  "title": "Predicting Unseen Labels using Label Hierarchies in Large-Scale Multi-label Learning",
+  "paper": "http://link.springer.com/chapter/10.1007%2F978-3-319-23528-8_7",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 113,
+  "pid": "C2",
+  "title": "Canonical Correlation Analysis on Riemannian Manifolds and its Applications",
+  "paper": "http://pages.cs.wisc.edu/~hwkim/projects/riem-cca",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 115,
+  "pid": "",
+  "title": "Evolutionary hypernetworks for learning to generate music from examples",
+  "paper": "https://ieeexplore.ieee.org/document/5277047",
+  "code": "",
+  "readme_img": null
+ },
+ {
+  "order": 116,
+  "pid": "",
+  "title": "Text-to-image cross-modal retrieval of magazine articles based on higher-order pattern recall by hypernetworks",
+  "paper": "",
+  "code": "",
+  "readme_img": null
+ }
+]
