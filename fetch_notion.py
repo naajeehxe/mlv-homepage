@@ -126,6 +126,17 @@ def body_markdown(page_id):
 def sort_rows(rows, key='Order', desc=False):
     return sorted(rows, key=lambda r: (prop(r['properties'], key, default=0) or 0), reverse=desc)
 
+def sort_pubs(rows):
+    """Newest first: Year desc → Order asc (blank Order = top of its year) → most recently created first.
+    So a new paper only needs a Year; leave Order empty and it lands at the top of the site (and of the Notion view)."""
+    def key(r):
+        p = r['properties']
+        year = prop(p, 'Year', default=0) or 0
+        order = prop(p, 'Order', default=None)
+        created = r.get('created_time', '')            # ISO string: later = lexicographically greater
+        return (-year, order if order is not None else float('-inf'), tuple(-ord(c) for c in created))
+    return sorted(rows, key=key)
+
 def visible(rows):
     return [r for r in rows if prop(r['properties'], 'Show on Site', default=True) is not False]
 
@@ -251,7 +262,7 @@ def main():
 
     # ---- Publications
     pubs, pub_index = [], {}
-    rows = sort_rows(visible(query_all(ds['publications'])))
+    rows = sort_pubs(visible(query_all(ds['publications'])))
     for i, r in enumerate(rows, 1):
         p = r['properties']; pub_index[r['id']] = i
         links = {}
@@ -263,10 +274,11 @@ def main():
         elif 'spotlight' in pl: badge = 'Spotlight'
         elif 'oral' in pl: badge = 'Oral'
         elif 'highlight' in pl: badge = 'Highlight'
+        # thumbnail priority: uploaded "Thumbnail File" → a Figure row pointing at this paper → "Thumbnail" URL
         thumb = ''
-        tfiles = prop(p, 'Thumbnail File', default=[]); turl = prop(p, 'Thumbnail URL')
-        if tfiles or (turl and turl not in fig_url_to_key):
-            key = f'pubthumb:{i}'; path = save_image(key, 'fig', tfiles + [turl], no_images=no_img)
+        tfiles = prop(p, 'Thumbnail File', default=[]); turl = prop(p, 'Thumbnail', 'Thumbnail URL')
+        if tfiles:
+            key = f'pubthumb:{i}'; path = save_image(key, 'fig', tfiles, no_images=no_img)
             if path: A[key] = path; thumb = key
         elif turl in fig_url_to_key: thumb = fig_url_to_key[turl]
         pubs.append({
@@ -275,13 +287,19 @@ def main():
             'venue_short': prop(p, 'Venue (short)'), 'presentation': pres, 'badge': badge, 'collab': prop(p, 'Collaboration'),
             'note': prop(p, 'Note'), 'highlight': bool(prop(p, 'Highlight', default=False)), 'links': links,
             'members': [id_to_person[m] for m in prop(p, 'MLV Members', default=[]) if m in id_to_person], 'thumb': thumb,
-            '_topics': prop(p, 'Research Topics', default=[]),
+            '_topics': prop(p, 'Research Topics', default=[]), '_turl': turl,
         })
     # thumbnails from figure→publication relation (when a figure points at a paper that has no thumbnail yet)
     for f in fig_by_id.values():
         if f['pub'] in pub_index:
             pb = pubs[pub_index[f['pub']] - 1]
             if not pb['thumb']: pb['thumb'] = f['key']
+    # last resort: the "Thumbnail" URL property
+    for pb in pubs:
+        turl = pb.pop('_turl')
+        if not pb['thumb'] and turl:
+            key = f"pubthumb:{pb['id']}"; path = save_image(key, 'fig', [turl], no_images=no_img)
+            if path: A[key] = path; pb['thumb'] = key
 
     # ---- Topics
     topics = []
