@@ -4,82 +4,50 @@
   "pid": "W4",
   "title": "SVMemAgent: A Streaming Video Memory Agent for Query-Agnostic Online Frame Selection",
   "status": "none",
-  "tried": [],
-  "secs": 3.2
+  "tried": [
+   "arxiv: no id in link and no exact title match"
+  ],
+  "secs": 3.3
  },
  "2": {
   "order": 2,
   "pid": "C81",
   "title": "Context Blindness in DPO: Mitigating Object Hallucination in MLLMs via Context-Calibrated Preference Optimization",
-  "arxiv": "2608.12158",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2608.12158v1/figure1_motivation.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/2.png",
-  "size": [
-   940,
-   234
-  ],
-  "secs": 0.3
+  "secs": 0.0
  },
  "3": {
   "order": 3,
   "pid": "C80",
   "title": "F⁴Splat: Feed-Forward Predictive Densification for Feed-Forward 3D Gaussian Splatting",
-  "arxiv": "2603.21304",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2603.21304v3/teaser.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/3.png",
-  "size": [
-   1600,
-   792
-  ],
-  "secs": 0.8
+  "secs": 0.0
  },
  "4": {
   "order": 4,
   "pid": "C79",
   "title": "VideoSearch-R1: Iterative Video Retrieval and Reasoning via Soft Query Refinement",
-  "arxiv": "2607.00446",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2607.00446v1/tease.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/4.png",
-  "size": [
-   1600,
-   559
-  ],
-  "secs": 0.7
+  "secs": 0.0
  },
  "5": {
   "order": 5,
   "pid": "C78",
   "title": "MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/MoE-GRPO/main/images/pipeline.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/5.png",
-  "size": [
-   1600,
-   527
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "6": {
   "order": 6,
   "pid": "C77",
   "title": "RegFormer: Transferable Relational Grounding for Efficient Weakly-Supervised Human-Object Interaction Detection",
-  "arxiv": "2604.00507",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2604.00507v1/motivation_figure_260327.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/6.png",
-  "size": [
-   945,
-   874
-  ],
-  "secs": 3.6
+  "secs": 0.0
  },
  "7": {
   "order": 7,
@@ -90,11 +58,11 @@
   "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Choi_DocPrune_Efficient_Document_Question_Answering_via_Background_Question_and_Comprehension-aware_CVPR_2026_paper.pdf",
   "file": "snapshot/img/pubthumb/7.png",
   "size": [
-   1198,
+   661,
    487
   ],
-  "crop": "page 1, box [150, 256, 542, 415]",
-  "secs": 6.3
+  "crop": "page 1, box [326, 256, 542, 415]",
+  "secs": 6.5
  },
  "8": {
   "order": 8,
@@ -102,98 +70,58 @@
   "title": "AI for atmosphere-ocean sciences: advancements, challenges, and ways forward",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag063/8444589"
   ],
-  "secs": 3.2
+  "secs": 3.4
  },
  "9": {
   "order": 9,
   "pid": "C75",
   "title": "Error as Signal: Stiffness-Aware Diffusion Sampling via Embedded Runge-Kutta Guidance",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/ERK-Guid/main/assets/main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/9.png",
-  "size": [
-   1600,
-   796
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "10": {
   "order": 10,
   "pid": "C74",
   "title": "SPRINT: Sparse-Dense Residual Fusion for Efficient Diffusion Transformers",
-  "arxiv": "2510.21986",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2510.21986v2/main_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/10.png",
-  "size": [
-   992,
-   375
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "11": {
   "order": 11,
   "pid": "C73",
   "title": "Relevance-aware Multi-context Contrastive Decoding for Retrieval-augmented Visual Question Answering",
-  "arxiv": "2602.06050",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2602.06050v1/motivation6.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/11.png",
-  "size": [
-   1245,
-   329
-  ],
-  "secs": 0.2
+  "secs": 0.0
  },
  "12": {
   "order": 12,
   "pid": "C72",
   "title": "Transferable Model-agnostic Vision-Language Model Adaptation for Efficient Weak-to-Strong Generalization",
-  "arxiv": "2508.08604",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2508.08604v3/transmiter_fig1_251228.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/12.png",
-  "size": [
-   1370,
-   709
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "13": {
   "order": 13,
   "pid": "C71",
   "title": "Improving Large Molecular Language Model via Relation-aware Multimodal Collaboration",
-  "arxiv": "2601.12256",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2601.12256v1/main_figure_modified.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/13.png",
-  "size": [
-   1600,
-   605
-  ],
-  "secs": 0.9
+  "secs": 0.0
  },
  "14": {
   "order": 14,
   "pid": "C70",
   "title": "TabFlash: Efficient Table Understanding with Progressive Question Conditioning and Token Focusing",
-  "arxiv": "2511.13283",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2511.13283v1/fig1_1112_v2.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/14.png",
-  "size": [
-   702,
-   457
-  ],
-  "secs": 1.1
+  "secs": 0.0
  },
  "15": {
   "order": 15,
@@ -201,9 +129,10 @@
   "title": "Improved Query Specialization for Transformer-based Visual Relationship Detection",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.5
+  "secs": 4.1
  },
  "16": {
   "order": 16,
@@ -211,9 +140,10 @@
   "title": "Parameter-Efficient Fine-Tuning via Meta-Regularizer",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.5
+  "secs": 3.6
  },
  "17": {
   "order": 17,
@@ -221,70 +151,42 @@
   "title": "In-cell neuromorphic computing in solid oxide fuel cells for bifunctional electrochemical power generation and artificial intelligence",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4991417"
   ],
-  "secs": 3.4
+  "secs": 3.3
  },
  "18": {
   "order": 18,
   "pid": "C69",
   "title": "Blockwise Flow Matching: Improving Flow Matching Models For Efficient High-Quality Generation",
-  "arxiv": "2510.21167",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "https://arxiv.org/pdf/2510.21167",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/18.png",
-  "size": [
-   1236,
-   448
-  ],
-  "crop": "page 2, box [104, 68, 508, 214]",
-  "secs": 1.3
+  "secs": 0.0
  },
  "19": {
   "order": 19,
   "pid": "C68",
   "title": "DeepVideo-R1: Video Reinforcement Fine-Tuning via Difficulty-aware Regressive GRPO",
-  "arxiv": "2506.07464",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2506.07464v5/simple_overview.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/19.png",
-  "size": [
-   1109,
-   787
-  ],
-  "secs": 0.3
+  "secs": 0.0
  },
  "20": {
   "order": 20,
   "pid": "C67",
   "title": "PRESTO: Preimage-Informed Instruction Optimization for Prompting Black-Box LLMs",
-  "arxiv": "2510.25808",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "https://arxiv.org/pdf/2510.25808",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/20.png",
-  "size": [
-   1218,
-   412
-  ],
-  "crop": "page 2, box [107, 68, 505, 202]",
-  "secs": 2.0
+  "secs": 0.0
  },
  "21": {
   "order": 21,
   "pid": "C66",
   "title": "Visual Diversity and Region-aware Prompt Learning for Zero-shot HOI Detection",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/VDRP/main/assets/Overall_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/21.png",
-  "size": [
-   1600,
-   900
-  ],
-  "secs": 1.1
+  "secs": 0.0
  },
  "22": {
   "order": 22,
@@ -296,53 +198,42 @@
   "url": "https://arxiv.org/pdf/2509.16560",
   "file": "snapshot/img/pubthumb/22.png",
   "size": [
-   1146,
+   694,
    760
   ],
-  "crop": "page 1, box [154, 216, 528, 464]",
-  "secs": 2.2
+  "crop": "page 1, box [302, 216, 528, 464]",
+  "secs": 3.3
  },
  "23": {
   "order": 23,
   "pid": "C64",
   "title": "Bidirectional Likelihood Estimation with Multi-Modal Large Language Models for Text-Video Retrieval",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/BLiM/main/asset/main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/23.png",
-  "size": [
-   1600,
-   658
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "24": {
   "order": 24,
   "pid": "C63",
   "title": "Representation Shift: Unifying Token Compression with FlashAttention",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/Representation-Shift/main/asset/framework.jpg",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/24.png",
-  "size": [
-   1600,
-   900
-  ],
-  "secs": 1.1
+  "secs": 0.0
  },
  "25": {
   "order": 25,
   "pid": "C62",
   "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+  "arxiv": "2410.17434",
   "status": "ok",
-  "source": "github-readme",
-  "url": "https://longvu.s3.amazonaws.com/assets/demo.gif",
+  "source": "arxiv-html",
+  "url": "https://arxiv.org/html/2410.17434v1/teaser.png",
   "file": "snapshot/img/pubthumb/25.png",
   "size": [
    1600,
-   635
+   794
   ],
-  "secs": 0.4
+  "secs": 0.9
  },
  "26": {
   "order": 26,
@@ -354,168 +245,99 @@
   "url": "https://arxiv.org/pdf/2404.14161",
   "file": "snapshot/img/pubthumb/26.png",
   "size": [
-   1337,
-   1039
+   737,
+   788
   ],
-  "crop": "page 1, box [110, 40, 547, 380]",
-  "secs": 1.7
+  "crop": "page 1, box [306, 122, 547, 380]",
+  "secs": 2.7
  },
  "27": {
   "order": 27,
   "pid": "C60",
   "title": "When Model Knowledge meets Diffusion Model: Diffusion-assisted Data-free Image Synthesis with Alignment of Domain and Class",
-  "arxiv": "2506.15381",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2506.15381v1/DDIS_main_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/27.png",
-  "size": [
-   1110,
-   709
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "30": {
   "order": 30,
   "pid": "J16",
   "title": "Conductive-bridge interlayer contacts for two-dimensional optoelectronic devices",
-  "status": "ok",
-  "source": "project-page",
-  "url": "https://media.springernature.com/m312/springer-static/image/art%3A10.1038%2Fs41928-025-01339-9/MediaObjects/41928_2025_1339_Fig1_HTML.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/30.png",
-  "size": [
-   312,
-   284
-  ],
-  "secs": 5.0
+  "secs": 0.0
  },
  "39": {
   "order": 39,
   "pid": "C50",
   "title": "Understanding Multi-compositional Learning in Vision and Language Models via Category Theory",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06472.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/39.png",
-  "size": [
-   501,
-   280
-  ],
-  "crop": "page 1, box [321, 461, 485, 552]",
-  "secs": 5.1
+  "secs": 0.0
  },
  "40": {
   "order": 40,
   "pid": "C49",
   "title": "Stochastic Conditional Diffusion Models for Robust Semantic Image Synthesis",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/SCDM/main/asset/framework.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/40.png",
-  "size": [
-   1308,
-   362
-  ],
-  "secs": 0.3
+  "secs": 0.0
  },
  "41": {
   "order": 41,
   "pid": "C48",
   "title": "vid-TLDR: Training Free Token merging for Light-weight Video Transformer",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/vid-TLDR/main/img/framework.jpg",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/41.png",
-  "size": [
-   1600,
-   846
-  ],
-  "secs": 0.7
+  "secs": 0.0
  },
  "44": {
   "order": 44,
   "pid": "C45",
   "title": "Prompt Learning via Meta-Regularization",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/ProMetaR/main/docs/prometar.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/44.png",
-  "size": [
-   1600,
-   388
-  ],
-  "secs": 1.0
+  "secs": 0.0
  },
  "45": {
   "order": 45,
   "pid": "C44",
   "title": "Retrieval-Augmented Open-Vocabulary Object Detection",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://github.com/user-attachments/assets/09e8ac36-135e-42cd-a6f2-877288e4a3da",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/45.png",
-  "size": [
-   1280,
-   720
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "47": {
   "order": 47,
   "pid": "",
   "title": "Robust Multimodal 3D Object Detection via Modality-Agnostic Decoding and Proximity-based Modality Ensemble",
-  "arxiv": "2407.19156",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2407.19156v2/fig1_fig.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/47.png",
-  "size": [
-   1600,
-   530
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "48": {
   "order": 48,
   "pid": "C42",
   "title": "Large Language Models are Temporal and Causal Reasoners for Video Question Answering",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/Flipped-VQA/main/asset/main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/48.png",
-  "size": [
-   1600,
-   797
-  ],
-  "secs": 0.8
+  "secs": 0.0
  },
  "49": {
   "order": 49,
   "pid": "C41",
   "title": "NuTrea: Neural Tree Search for Context-guided Multi-hop KGQA",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/NuTrea/main/assets/main_fig.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/49.png",
-  "size": [
-   1306,
-   550
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "50": {
   "order": 50,
   "pid": "C40",
   "title": "Advancing Bayesian Optimization via Learning Correlated Latent Spaces",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://github.com/mlvlab/CoBO/assets/29230924/6cffa825-4c02-4f08-acd2-31e546c4458d",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/50.png",
-  "size": [
-   1600,
-   1108
-  ],
-  "secs": 0.7
+  "secs": 0.0
  },
  "52": {
   "order": 52,
@@ -527,11 +349,11 @@
   "url": "https://arxiv.org/pdf/2308.09363",
   "file": "snapshot/img/pubthumb/52.png",
   "size": [
-   1245,
+   747,
    283
   ],
-  "crop": "page 1, box [142, 250, 549, 342]",
-  "secs": 1.0
+  "crop": "page 1, box [305, 250, 549, 342]",
+  "secs": 2.0
  },
  "53": {
   "order": 53,
@@ -543,83 +365,51 @@
   "url": "https://arxiv.org/pdf/2309.03406",
   "file": "snapshot/img/pubthumb/53.png",
   "size": [
-   1258,
+   674,
    712
   ],
-  "crop": "page 1, box [142, 221, 553, 454]",
-  "secs": 0.7
+  "crop": "page 1, box [333, 221, 553, 454]",
+  "secs": 1.0
  },
  "55": {
   "order": 55,
   "pid": "C35",
   "title": "Read-only Prompt Optimization for Vision-Language Few-shot Learning",
-  "arxiv": "2308.14960",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2308.14960v2/Figures/figure1.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/55.png",
-  "size": [
-   1600,
-   851
-  ],
-  "secs": 0.8
+  "secs": 0.0
  },
  "56": {
   "order": 56,
   "pid": "C34",
   "title": "Robust Camera Pose Refinement for Multi-Resolution Hash Encoding",
-  "arxiv": "2302.01571",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2302.01571v1/fig1_file.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/56.png",
-  "size": [
-   397,
-   304
-  ],
-  "secs": 0.2
+  "secs": 0.0
  },
  "57": {
   "order": 57,
   "pid": "C33",
   "title": "MELTR: Meta Loss Transformer for Learning to Fine-tune Video Foundation Models",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/MELTR/master/asset/main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/57.png",
-  "size": [
-   1600,
-   608
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "58": {
   "order": 58,
   "pid": "C32",
   "title": "Self-positioning Point-based Transformer for Point Cloud Understanding",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/SPoTr/main/assets/main_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/58.png",
-  "size": [
-   1600,
-   656
-  ],
-  "secs": 1.5
+  "secs": 0.0
  },
  "59": {
   "order": 59,
   "pid": "C31",
   "title": "Relation-aware Language-Graph Transformer for Question Answering",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/qat/main/main_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/59.png",
-  "size": [
-   1600,
-   606
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "60": {
   "order": 60,
@@ -627,9 +417,10 @@
   "title": "Self-Powering Sensory Device with Multi-Spectrum Image Realization for Smart Indoor Environments",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202307523"
   ],
-  "secs": 6.6
+  "secs": 3.5
  },
  "61": {
   "order": 61,
@@ -637,9 +428,10 @@
   "title": "Recurrent DETR: Transformer-based Object Detection for Crowded Scenes",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.3
+  "secs": 3.4
  },
  "62": {
   "order": 62,
@@ -647,24 +439,18 @@
   "title": "Robust Auxiliary Learning with Weighting Function for Biased Data",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0020025523000981"
   ],
-  "secs": 3.7
+  "secs": 7.0
  },
  "63": {
   "order": 63,
   "pid": "J12",
   "title": "Deep Neural Network for Solving Differential Equations Motivated by Legendre-Galerkin Approximation",
-  "arxiv": "2010.12975",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2010.12975v1/figures/activations.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/63.png",
-  "size": [
-   1600,
-   498
-  ],
-  "secs": 1.0
+  "secs": 0.0
  },
  "64": {
   "order": 64,
@@ -672,109 +458,81 @@
   "title": "Deep Learning based Detection for Multiple Cache Side-channel Attacks",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 6.1
+  "secs": 3.3
  },
  "65": {
   "order": 65,
   "pid": "W3",
   "title": "Concept Bottleneck with Visual Concept Filtering for Explainable Medical Image Classification",
-  "arxiv": "2308.11920",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2308.11920v1/figure/main_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/65.png",
-  "size": [
-   1600,
-   889
-  ],
-  "secs": 2.3
+  "secs": 0.0
  },
  "66": {
   "order": 66,
   "pid": "C30",
   "title": "SageMix: Saliency-Guided Mixup for Point Clouds",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/SageMix/master/assets/figure_main.jpg",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/66.png",
-  "size": [
-   1600,
-   639
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "67": {
   "order": 67,
   "pid": "C29",
   "title": "Invertible Monotone Operators for Normalizing Flows",
   "arxiv": "2210.08176",
-  "status": "none",
-  "tried": [
-   "https://arxiv.org/html/2210.08176: 404 Client Error: Not Found for url: https://arxiv.org/html/2210.08176",
-   "https://ar5iv.labs.arxiv.org/html/2210.08176: no-figure",
-   "pdf: 403 Client Error: Forbidden for url: https://openreview.net/pdf?id=USoYIT4IQz"
+  "status": "ok",
+  "source": "pdf-crop",
+  "url": "https://arxiv.org/pdf/2210.08176",
+  "file": "snapshot/img/pubthumb/67.png",
+  "size": [
+   937,
+   418
   ],
-  "secs": 3.6
+  "crop": "page 2, box [142, 27, 449, 164]",
+  "secs": 4.8
  },
  "69": {
   "order": 69,
   "pid": "C27",
   "title": "k-SALSA: k-anonymous synthetic averaging of retinal images via local style alignment",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136810652.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/69.png",
-  "size": [
-   966,
-   545
-  ],
-  "crop": "page 5, box [150, 175, 466, 353]",
-  "secs": 9.2
+  "secs": 0.0
  },
  "70": {
   "order": 70,
   "pid": "C26",
   "title": "Video-Text Representation Learning via Differentiable Weak Temporal Alignment",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/VT-TWINS/main/asset/main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/70.png",
-  "size": [
-   1588,
-   406
-  ],
-  "secs": 0.3
+  "secs": 0.0
  },
  "71": {
   "order": 71,
   "pid": "C25",
   "title": "Consistency Learning via Decoding Path Augmentation for Transformers in Human Object Interaction Detection",
   "status": "ok",
-  "source": "github-readme",
-  "url": "https://user-images.githubusercontent.com/70801434/173210572-5d340252-bc9f-4adb-9034-600837f201a7.gif",
+  "source": "pdf-crop",
+  "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Park_Consistency_Learning_via_Decoding_Path_Augmentation_for_Transformers_in_Human_CVPR_2022_paper.pdf",
   "file": "snapshot/img/pubthumb/71.png",
   "size": [
-   1280,
-   720
+   734,
+   221
   ],
-  "secs": 0.2
+  "crop": "page 1, box [305, 242, 545, 314]",
+  "secs": 4.4
  },
  "72": {
   "order": 72,
   "pid": "C24",
   "title": "Deformable Graph Convolutional Networks",
-  "arxiv": "2112.14438",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2112.14438v1/Figures/v1_rev5.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/72.png",
-  "size": [
-   1600,
-   903
-  ],
-  "secs": 5.0
+  "secs": 0.0
  },
  "73": {
   "order": 73,
@@ -782,19 +540,25 @@
   "title": "Randomly Shuffled Convolution for Self-Supervised Representation Learning",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0020025522013032?via%3Dihub"
   ],
-  "secs": 3.3
+  "secs": 3.4
  },
  "74": {
   "order": 74,
   "pid": "J9",
   "title": "Graph Transformer Networks: Learning Meta-path Graphs to Improve GNNs",
-  "status": "none",
-  "tried": [
-   "page: 403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0893608022002003?utm_campaign=STMJ_AUTH_SERV_PUBLISHED&utm_medium=email&utm_acid=156305126&SIS_ID=&dgcid=STMJ_AUTH_SERV_PUBLISHED&CMX_ID=&utm_in=DM265225&utm_source=AC_"
+  "arxiv": "2106.06218",
+  "status": "ok",
+  "source": "arxiv-html",
+  "url": "https://arxiv.org/html/2106.06218v1/figures/GT_Layer.png",
+  "file": "snapshot/img/pubthumb/74.png",
+  "size": [
+   1600,
+   608
   ],
-  "secs": 3.2
+  "secs": 0.8
  },
  "75": {
   "order": 75,
@@ -802,9 +566,10 @@
   "title": "Explainable Time-series Prediction using a Residual Network and Gradient-based methods",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.2
+  "secs": 3.3
  },
  "76": {
   "order": 76,
@@ -812,81 +577,50 @@
   "title": "Single cell lineage reconstruction using distance-based algorithms and the R package, DCLEAR",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: https://pubmed.ncbi.nlm.nih.gov/35331133/"
   ],
-  "secs": 3.3
+  "secs": 3.5
  },
  "77": {
   "order": 77,
   "pid": "",
   "title": "Deformable Graph Transformer",
-  "arxiv": "2206.14337",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2206.14337v2/main_figure_v5.5.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/77.png",
-  "size": [
-   1600,
-   697
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "78": {
   "order": 78,
   "pid": "C23",
   "title": "Metropolis-Hastings Data Augmentation for Graph Neural Networks",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/hyeonzini/Metropolis-Hastings-Data-Augmentation-for-Graph-Neural-Networks/main/Figures/main_figure.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/78.png",
-  "size": [
-   1241,
-   501
-  ],
-  "secs": 0.5
+  "secs": 0.0
  },
  "79": {
   "order": 79,
   "pid": "C22",
   "title": "Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks for Link Prediction",
-  "arxiv": "2206.04216",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2206.04216v1/model_figure2.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/79.png",
-  "size": [
-   1600,
-   900
-  ],
-  "secs": 3.5
+  "secs": 0.0
  },
  "80": {
   "order": 80,
   "pid": "C21",
   "title": "Point Cloud Augmentation with Weighted Local Transformations",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/PointWOLF/master/assets/PointWOLF_main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/80.png",
-  "size": [
-   1600,
-   723
-  ],
-  "secs": 0.6
+  "secs": 0.0
  },
  "81": {
   "order": 81,
   "pid": "C20",
   "title": "HOTR: End-to-End Human-Object Interaction Detection with Transformers",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/HOTR/main/imgs/hotr_pipeline.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/81.png",
-  "size": [
-   1600,
-   619
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "82": {
   "order": 82,
@@ -894,9 +628,10 @@
   "title": "Learning Augmentation for GNNs with Consistency Regularization",
   "status": "none",
   "tried": [
-   "page: 418 Client Error: Unknown Code for url: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9535521"
+   "arxiv: no id in link and no exact title match",
+   "page: no-large-image"
   ],
-  "secs": 3.3
+  "secs": 3.9
  },
  "83": {
   "order": 83,
@@ -904,9 +639,10 @@
   "title": "Learning to Balance Local Losses via Meta-Learning",
   "status": "none",
   "tried": [
-   "page: 418 Client Error: Unknown Code for url: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9541196"
+   "arxiv: no id in link and no exact title match",
+   "page: no-large-image"
   ],
-  "secs": 3.2
+  "secs": 3.4
  },
  "84": {
   "order": 84,
@@ -914,9 +650,10 @@
   "title": "Learning Non-parametric Surrogate Losses with Correlated Gradients",
   "status": "none",
   "tried": [
-   "page: 418 Client Error: Unknown Code for url: https://ieeexplore.ieee.org/abstract/document/9570322"
+   "arxiv: no id in link and no exact title match",
+   "page: no-large-image"
   ],
-  "secs": 3.2
+  "secs": 3.5
  },
  "85": {
   "order": 85,
@@ -924,9 +661,10 @@
   "title": "Search-and-Attack: Temporally SparseAdversarial Perturbations on Videos",
   "status": "none",
   "tried": [
-   "page: 418 Client Error: Unknown Code for url: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9592758"
+   "arxiv: no id in link and no exact title match",
+   "page: no-large-image"
   ],
-  "secs": 3.2
+  "secs": 4.1
  },
  "86": {
   "order": 86,
@@ -934,127 +672,74 @@
   "title": "Self-Supervised Learning for Anomaly Detection with Dynamic Local Augmentation",
   "status": "none",
   "tried": [
-   "page: 418 Client Error: Unknown Code for url: https://ieeexplore.ieee.org/abstract/document/9597511"
+   "arxiv: no id in link and no exact title match",
+   "page: no-large-image"
   ],
-  "secs": 3.2
+  "secs": 3.5
  },
  "87": {
   "order": 87,
   "pid": "",
   "title": "Self-supervised Auxiliary Learning for Graph Neural Networks via Meta-Learning",
-  "arxiv": "2103.00771",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2103.00771v2/Figures/Figure_Main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/87.png",
-  "size": [
-   1600,
-   431
-  ],
-  "secs": 0.3
+  "secs": 0.0
  },
  "88": {
   "order": 88,
   "pid": "",
   "title": "Graph Transformer Networks: Learning Meta-path Graphs to Improve GNNs",
-  "arxiv": "2106.06218",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2106.06218v1/figures/GT_Layer.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/88.png",
-  "size": [
-   1600,
-   608
-  ],
-  "secs": 0.5
+  "secs": 0.0
  },
  "89": {
   "order": 89,
   "pid": "C19",
   "title": "Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/mlvlab/SELAR/main/Figure_Main.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/89.png",
-  "size": [
-   1600,
-   431
-  ],
-  "secs": 0.3
+  "secs": 0.0
  },
  "90": {
   "order": 90,
   "pid": "C18",
   "title": "UnionDet: Union-Level Detector Towards Real-Time Human-Object Interaction Detection",
-  "arxiv": "2312.12664",
-  "status": "ok",
-  "source": "arxiv-html",
-  "url": "https://arxiv.org/html/2312.12664v1/figures/images/union_challenges.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/90.png",
-  "size": [
-   1464,
-   553
-  ],
-  "secs": 5.5
+  "secs": 0.0
  },
  "91": {
   "order": 91,
   "pid": "C17",
   "title": "Robust Neural Networks inspired by Strong Stability Preserving Runge-Kutta methods",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540392.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/91.png",
-  "size": [
-   660,
-   458
-  ],
-  "crop": "page 2, box [200, 112, 415, 261]",
-  "secs": 5.2
+  "secs": 0.0
  },
  "92": {
   "order": 92,
   "pid": "C16",
   "title": "Graph Transformer Networks",
-  "status": "ok",
-  "source": "github-readme",
-  "url": "https://raw.githubusercontent.com/seongjunyun/Graph_Transformer_Networks/master/GTN.png",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/92.png",
-  "size": [
-   1600,
-   880
-  ],
-  "secs": 0.4
+  "secs": 0.0
  },
  "93": {
   "order": 93,
   "pid": "C15",
   "title": "Sampling-free Uncertainty Estimation in Gated Recurrent Units with Applications to Normative Modeling in Neuroimaging",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "http://proceedings.mlr.press/v115/hwang20a/hwang20a.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/93.png",
-  "size": [
-   1449,
-   324
-  ],
-  "crop": "page 2, box [69, 70, 542, 175]",
-  "secs": 3.5
+  "secs": 0.0
  },
  "94": {
   "order": 94,
   "pid": "C14",
   "title": "Mixed Effects Neural Networks (MeNets) with Applications to Gaze Estimation",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "http://openaccess.thecvf.com/content_CVPR_2019/papers/Xiong_Mixed_Effects_Neural_Networks_MeNets_With_Applications_to_Gaze_Estimation_CVPR_2019_paper.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/94.png",
-  "size": [
-   725,
-   237
-  ],
-  "crop": "page 3, box [306, 597, 543, 674]",
-  "secs": 5.1
+  "secs": 0.0
  },
  "95": {
   "order": 95,
@@ -1066,11 +751,11 @@
   "url": "https://arxiv.org/pdf/1904.03775",
   "file": "snapshot/img/pubthumb/95.png",
   "size": [
-   1538,
-   1485
+   795,
+   1304
   ],
-  "crop": "page 4, box [46, 118, 549, 603]",
-  "secs": 1.0
+  "crop": "page 4, box [46, 177, 306, 603]",
+  "secs": 0.8
  },
  "96": {
   "order": 96,
@@ -1078,6 +763,7 @@
   "title": "On Training Deep 3D CNN Models with Dependent Samples in Neuroimaging",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
   "secs": 3.4
@@ -1088,40 +774,26 @@
   "title": "Localizing differentially evolving covariance structures via scan statistics",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 403 Client Error: Forbidden for url: http://www.ams.org/journals/qam/2019-77-02/S0033-569X-2018-01522-9/"
   ],
-  "secs": 3.3
+  "secs": 3.5
  },
  "98": {
   "order": 98,
   "pid": "",
   "title": "Sampling-free Uncertainty Estimation in Gated Recurrent Units with Exponential Families",
-  "arxiv": "1804.07351",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "https://arxiv.org/pdf/1804.07351",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/98.png",
-  "size": [
-   1236,
-   270
-  ],
-  "crop": "page 3, box [104, 68, 508, 156]",
-  "secs": 0.4
+  "secs": 0.0
  },
  "99": {
   "order": 99,
   "pid": "C12",
   "title": "Efficient Relative Attribute Learning using Graph Neural Networks",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "http://openaccess.thecvf.com/content_ECCV_2018/papers/Zihang_Meng_Efficient_Relative_Attribute_ECCV_2018_paper.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/99.png",
-  "size": [
-   871,
-   439
-  ],
-  "crop": "page 4, box [165, 423, 450, 567]",
-  "secs": 4.1
+  "secs": 0.0
  },
  "100": {
   "order": 100,
@@ -1129,9 +801,10 @@
   "title": "Tensorize, Factorize and Regularize: Robust Visual Relationship Learning",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "pdf: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/papers/cvpr2018_hwang.pdf"
   ],
-  "secs": 3.4
+  "secs": 4.3
  },
  "101": {
   "order": 101,
@@ -1147,7 +820,7 @@
    549
   ],
   "crop": "page 5, box [84, 155, 525, 334]",
-  "secs": 1.9
+  "secs": 1.7
  },
  "102": {
   "order": 102,
@@ -1155,24 +828,18 @@
   "title": "Statistical Learning Models for Manifold-valued Measurements with Applications to Computer Vision and Neuroimaging",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "pdf: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/papers/thesis-hyunwoo-j-kim.pdf"
   ],
-  "secs": 3.3
+  "secs": 3.8
  },
  "103": {
   "order": 103,
   "pid": "C10",
   "title": "Maximizing Subset Accuracy with Recurrent Neural Networks in Multi-label Classification",
-  "status": "ok",
-  "source": "pdf-crop",
-  "url": "https://papers.nips.cc/paper/7125-maximizing-subset-accuracy-with-recurrent-neural-networks-in-multi-label-classification.pdf",
+  "status": "kept",
   "file": "snapshot/img/pubthumb/103.png",
-  "size": [
-   978,
-   388
-  ],
-  "crop": "page 4, box [143, 68, 463, 195]",
-  "secs": 4.6
+  "secs": 0.0
  },
  "104": {
   "order": 104,
@@ -1180,9 +847,10 @@
   "title": "Riemannian Nonlinear Mixed Effects Models: Analyzing Longitudinal Deformations in Neuroimaging",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/projects/riem-mem/"
   ],
-  "secs": 3.5
+  "secs": 3.9
  },
  "105": {
   "order": 105,
@@ -1190,9 +858,10 @@
   "title": "Riemannian Variance Filtering: An Independent Filtering Scheme for Statistical Tests on Manifold-valued Data",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "pdf: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/papers/rvf-cvprw-2017.pdf"
   ],
-  "secs": 3.3
+  "secs": 3.9
  },
  "106": {
   "order": 106,
@@ -1200,9 +869,10 @@
   "title": "Cover Song Identification with Metric Learning Using Distance as a Feature",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "pdf: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/papers/ismir2017_cover_song_identification.pdf"
   ],
-  "secs": 3.3
+  "secs": 3.8
  },
  "107": {
   "order": 107,
@@ -1210,9 +880,10 @@
   "title": "Abundant Inverse Regression using Sufficient Reduction and its Applications",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/projects/air/"
   ],
-  "secs": 3.3
+  "secs": 3.6
  },
  "108": {
   "order": 108,
@@ -1220,9 +891,10 @@
   "title": "Latent Variable Graphical Model Selection using Harmonic Analysis: Applications to the Human Connectome Project (HCP)",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/projects/lvgm/"
   ],
-  "secs": 3.3
+  "secs": 3.5
  },
  "109": {
   "order": 109,
@@ -1230,9 +902,10 @@
   "title": "Interpolation on the manifold of k-component Gaussian Mixture Models (GMMs)",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/projects/k-gmm"
   ],
-  "secs": 3.3
+  "secs": 3.7
  },
  "110": {
   "order": 110,
@@ -1240,9 +913,10 @@
   "title": "Manifold-valued Dirichlet Processes",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/projects/dp-mglm"
   ],
-  "secs": 3.3
+  "secs": 3.8
  },
  "111": {
   "order": 111,
@@ -1250,9 +924,10 @@
   "title": "Canonical Correlation Analysis on SPD(n) Manifolds",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.5
+  "secs": 3.8
  },
  "112": {
   "order": 112,
@@ -1260,9 +935,10 @@
   "title": "Predicting Unseen Labels using Label Hierarchies in Large-Scale Multi-label Learning",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.4
+  "secs": 3.6
  },
  "113": {
   "order": 113,
@@ -1270,9 +946,10 @@
   "title": "Canonical Correlation Analysis on Riemannian Manifolds and its Applications",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: 404 Client Error: Not Found for url: https://pages.cs.wisc.edu/~hwkim/projects/riem-cca"
   ],
-  "secs": 3.3
+  "secs": 3.8
  },
  "115": {
   "order": 115,
@@ -1280,16 +957,19 @@
   "title": "Evolutionary hypernetworks for learning to generate music from examples",
   "status": "none",
   "tried": [
+   "arxiv: no id in link and no exact title match",
    "page: no-large-image"
   ],
-  "secs": 3.7
+  "secs": 3.4
  },
  "116": {
   "order": 116,
   "pid": "",
   "title": "Text-to-image cross-modal retrieval of magazine articles based on higher-order pattern recall by hypernetworks",
   "status": "none",
-  "tried": [],
-  "secs": 3.1
+  "tried": [
+   "arxiv: no id in link and no exact title match"
+  ],
+  "secs": 3.2
  }
 }
