@@ -271,7 +271,7 @@ def main():
     for i, r in enumerate(rows, 1):
         p = r['properties']; pub_index[r['id']] = i
         links = {}
-        for label, names in [('Code', ['Code']), ('Video', ['Video']), ('Slides', ['Slides']), ('Poster', ['Poster']), ('Project page', ['Project Page']), ('Demo', ['Demo'])]:
+        for label, names in [('Code', ['Code']), ('Video', ['Video']), ('Slides', ['Slides']), ('Poster', ['Poster']), ('Project page', ['Project Page']), ('Demo', ['Demo']), ('Supp', ['Supplement', 'Supp'])]:
             v = prop(p, *names)
             if v: links[label] = v
         pres = prop(p, 'Presentation'); pl = pres.lower(); badge = ''
