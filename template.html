@@ -381,6 +381,8 @@ for (const k of ['site_url','pi_email','apply_email','scholar','map_embed','cale
 }
 const img = k => A[k] || '';
 const esc = t => String(t ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+// plain text of a markdown snippet (for search + attribute contexts)
+const plainmd = s => String(s||'').replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/\*\*/g,'');
 const inline = t => esc(t)
   .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,a,b)=> b.startsWith('#')||b.startsWith('mailto:') ? `<a href="${b}">${a}</a>` : `<a href="${b}" target="_blank" rel="noopener">${a}</a>`)
@@ -523,7 +525,7 @@ function personCard(p){
     ${photo}
     <div class="body">
       <div class="name">${name}<small>${esc(p.ko)}</small></div>
-      <div class="pos">${esc(p.position)}</div>
+      <div class="pos">${inline(p.position)}</div>
       <div class="chips">${chips}</div>
       <div class="foot"><div class="icons">${links}</div>${n?`<a class="pubs" href="#/publications?author=${p.id}">Show papers</a>`:''}</div>
     </div></article>`;
@@ -543,7 +545,7 @@ function peoplePage(){
       </div>
       <div>
         <h3>${esc(pi.name)} <span class="muted" style="font-weight:400;font-size:18px">${esc(pi.ko)}</span></h3>
-        <div class="pos">${esc(pi.position)}</div>
+        <div class="pos">${inline(pi.position)}</div>
         <div class="affil">${md(pi.affil_detail.replace(new RegExp('^'+pi.position.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*\\n'),'')).replace(/<br>/g,' · ').replace(/<\/?p>/g,'')}</div>
         <div class="bio prose">${md(pi.bio)}</div>
         <div class="chips" style="margin-top:14px">${pi.interests.map(i=>`<span class="chip soft">${esc(i)}</span>`).join('')}</div>
@@ -742,12 +744,12 @@ function openSearch(){
   inp.oninput=()=>{
     const q=inp.value.trim(); const res=ov.querySelector('#sres'); if(q.length<2){ res.innerHTML=''; return; }
     const lq=q.toLowerCase(); const has=(...xs)=>xs.join(' ').toLowerCase().includes(lq);
-    const people=D.people.filter(p=>has(p.name,p.ko,p.position,p.interests.join(' '))).slice(0,6);
+    const people=D.people.filter(p=>has(p.name,p.ko,plainmd(p.position),p.interests.join(' '))).slice(0,6);
     const pubs=D.pubs.filter(p=>has(p.title,p.authors,p.venue,p.venue_short,String(p.year))).slice(0,8);
     const topics=D.topics.filter(t=>has(t.name,t.desc)).slice(0,4);
     const news=D.news.filter(n=>has(n.md)).slice(0,5);
     let h='';
-    if(people.length) h+=`<div class="grp">People</div>`+people.map(p=>`<a class="hit" href="#/people?t=p${p.id}"><b>${hl(p.name,q)}</b> <span class="muted">${esc(p.ko)}</span><small>${esc(p.position||p.group)}${p.interests.length?' · '+hl(p.interests.slice(0,3).join(', '),q):''}</small></a>`).join('');
+    if(people.length) h+=`<div class="grp">People</div>`+people.map(p=>`<a class="hit" href="#/people?t=p${p.id}"><b>${hl(p.name,q)}</b> <span class="muted">${esc(p.ko)}</span><small>${esc(plainmd(p.position)||p.group)}${p.interests.length?' · '+hl(p.interests.slice(0,3).join(', '),q):''}</small></a>`).join('');
     if(pubs.length) h+=`<div class="grp">Publications</div>`+pubs.map(p=>`<a class="hit" href="#/publications?t=pub${p.id}"><b>${hl(p.title,q)}</b><small>${hl(p.authors,q)} · ${esc(p.venue_short)} ${p.year}</small></a>`).join('');
     if(topics.length) h+=`<div class="grp">Research topics</div>`+topics.map(t=>`<a class="hit" href="#/research?t=topic${t.id}"><b>${hl(t.name,q)}</b></a>`).join('');
     if(news.length) h+=`<div class="grp">News</div>`+news.map(n=>`<a class="hit" href="#/home"><b>${n.date}</b><small>${hl(n.md.replace(/\[([^\]]+)\]\([^)]+\)/g,'$1'),q)}</small></a>`).join('');
