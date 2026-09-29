@@ -143,18 +143,35 @@ def visible(rows):
 # ----------------------------------------------------------------------------- images
 SNAP = json.load(open(HERE / 'snapshot' / 'manifest.json'))
 SNAP_BY_LABEL = {}
-for k, lab in SNAP['labels'].items():
-    SNAP_BY_LABEL.setdefault((k.split(':')[0], lab.strip().lower()), k)
+SNAP_LABEL_QUEUE = {}   # (kind, label) → [keys in snapshot order]; several photos can share one caption
+def _lab(s):
+    """Caption/name → comparison key: markdown links stripped, all whitespace (incl. nbsp/newlines) collapsed, lower-case."""
+    s = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', str(s or ''))
+    return re.sub(r'\s+', ' ', s.replace('\xa0', ' ')).strip().lower()
+_snap_key_no = lambda k: int(k.split(':')[1]) if ':' in k and k.split(':')[1].isdigit() else 0
+for k in sorted(SNAP['labels'], key=lambda k: (k.split(':')[0], _snap_key_no(k))):
+    lab = _lab(SNAP['labels'][k])
+    SNAP_BY_LABEL.setdefault((k.split(':')[0], lab), k)
+    SNAP_LABEL_QUEUE.setdefault((k.split(':')[0], lab), []).append(k)
 
 def snapshot_file(key=None, kind=None, label=None):
     # People are matched by NAME first: the positional key (person:<n>) shifts whenever a row is inserted
     # or re-ordered in Notion, which would hand everyone below the insertion point the wrong photo.
     if kind == 'person':
-        k = SNAP_BY_LABEL.get((kind, (label or '').strip().lower()))
+        k = SNAP_BY_LABEL.get((kind, _lab(label)))
         return HERE / 'snapshot' / SNAP['files'][k] if k else None
+    # Photos are matched by CAPTION for the same reason (the n-th row with a caption ↔ the n-th snapshot
+    # image with that caption); a caption unknown to the snapshot gets nothing rather than someone else's photo.
+    if kind == 'photo':
+        lab = _lab(label)
+        q = SNAP_LABEL_QUEUE.get((kind, lab))
+        if not q and len(lab) >= 12:   # caption edited slightly (e.g. a place appended): accept a unique prefix match
+            cands = [v for (kk, l), v in SNAP_LABEL_QUEUE.items() if kk == kind and v and len(l) >= 12 and (lab.startswith(l) or l.startswith(lab))]
+            q = cands[0] if len(cands) == 1 else None
+        return HERE / 'snapshot' / SNAP['files'][q.pop(0)] if q else None
     if key and key in SNAP['files']: return HERE / 'snapshot' / SNAP['files'][key]
     if kind and label:
-        k = SNAP_BY_LABEL.get((kind, label.strip().lower()))
+        k = SNAP_BY_LABEL.get((kind, _lab(label)))
         if k: return HERE / 'snapshot' / SNAP['files'][k]
     return None
 
